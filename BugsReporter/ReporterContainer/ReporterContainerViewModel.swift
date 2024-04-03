@@ -13,6 +13,8 @@ class ReporterContainerViewModel: ObservableObject {
    unowned let coordinator: ReporterContainerCoordinator
     
     @Published var isContainerHidden: Bool = false
+    @Published var isCapturing = false
+
     var report: ScreenBug?
 
     init(coordinator: ReporterContainerCoordinator) {
@@ -33,7 +35,29 @@ class ReporterContainerViewModel: ObservableObject {
         }
     }
     
-    @MainActor func openBugSubmissionView(image: Image?){
-        coordinator.openBugSubmissionScreen(with: .init(image: image, description: nil))
+    @MainActor private func openBugSubmissionView(image: Image?){
+        coordinator.openBugSubmissionScreen(with: .init(image: image, description: ""))
+    }
+    
+    func takeScreenshotAndNavigate() {
+        // Begin the capture process
+        withAnimation(.spring(duration: 0.8)) {
+            isCapturing = true
+        }
+        self.isContainerHidden = true
+        // Simulate taking a screenshot
+        self.takeScreenShoot { image in
+            
+            // Delay to simulate the "blink" effect
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                withAnimation(.spring(duration: 0.2)) {
+                    self.isCapturing = false
+                }
+            }
+            // Delay to navigate after the "blink"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                self.openBugSubmissionView(image: image)
+            }
+        }
     }
 }

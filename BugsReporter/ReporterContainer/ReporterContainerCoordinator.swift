@@ -22,7 +22,7 @@ public class ReporterContainerCoordinator: ObservableObject , Identifiable {
     deinit {
         
     }
-    func openBugSubmissionScreen(with report: ScreenBug?){
+    func openBugSubmissionScreen(with report: ScreenBug){
             bugSubmissionCoordinator = .init(parent: nil, report: report)
     }
 }

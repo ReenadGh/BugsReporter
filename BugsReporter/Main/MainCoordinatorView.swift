@@ -22,9 +22,9 @@ struct MainCoordinatorView: View {
                 
                 MainView(viewModel: coordinator.viewModel)
                 
-                    .navigationDestination(isPresented: $coordinator.isBugSubmissionScreenActive) {
-                        BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
-                    }
+//                    .navigationDestination(isPresented: $coordinator.isBugSubmissionScreenActive) {
+//                        BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
+//                    }
             }
         }
     }

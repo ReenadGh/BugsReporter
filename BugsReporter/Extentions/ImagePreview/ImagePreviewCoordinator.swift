@@ -18,7 +18,8 @@ public class ImagePreviewCoordinator: ObservableObject {
         self.parent = parent
         self.image = image
     }
-    deinit {
-        
+    
+    @MainActor func backToMainScreen() {
+        parent?.parent?.closeBugSubmissionScreen()
     }
 }

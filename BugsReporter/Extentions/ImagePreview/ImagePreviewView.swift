@@ -13,6 +13,16 @@ struct ImagePreviewView: View {
 
     var body: some View {
         coordinator.image
+            .navigationTitle("Image Preview")
+                     .toolbar {
+                         if coordinator.parent?.parent != nil {
+                             ToolbarItem(placement: .navigationBarTrailing) {
+                                 Button("Back To Main") {
+                                     coordinator.backToMainScreen()
+                                 }
+                             }
+                         }
+                     }
     }
 }
 

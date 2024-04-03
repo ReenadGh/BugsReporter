@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 class BugSubmissionViewModel: ObservableObject{
     
     unowned let coordinator: BugSubmissionCoordinator
-    @Published var report: ScreenBug?
+    @Published var report: ScreenBug
     
-    init(coordinator: BugSubmissionCoordinator, report: ScreenBug? = nil) {
+    init(coordinator: BugSubmissionCoordinator, report: ScreenBug = .init(image: nil, description: "")) {
         self.coordinator = coordinator
         self.report = report
+    }
+    var isImageUploaded: Bool {
+        return report.image != nil
     }
     
     @MainActor func backToMainScreen(){
@@ -22,10 +26,12 @@ class BugSubmissionViewModel: ObservableObject{
     }
     
     @MainActor func openImagePreview(){
-        if let report {
             if let image = report.image {
                 coordinator.openImagePreview(for: image)
             }
-        }
+    }
+    
+    func deleteImage() {
+        report.image = nil
     }
 }

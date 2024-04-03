@@ -16,14 +16,11 @@ public class BugSubmissionCoordinator: ObservableObject {
     @Published var viewModel: BugSubmissionViewModel!
     var report: ScreenBug?
 
-    init(parent: MainCoordinator?, report: ScreenBug? = nil) {
+    init(parent: MainCoordinator?, report: ScreenBug = .init(image: nil, description: "")) {
         self.parent = parent
         viewModel = BugSubmissionViewModel(coordinator: self , report: report)
     }
     
-    deinit {
-        
-    }
     @MainActor func backToParent(){
         parent?.closeBugSubmissionScreen()
     }

@@ -12,7 +12,6 @@ struct ReporterContainerView<Content: View>: View {
     let content: Content
     
     @ObservedObject var coordinator = ReporterContainerCoordinator()
-    
     init(@ViewBuilder content: () -> Content) {
          self.content = content()
      }
@@ -21,12 +20,10 @@ struct ReporterContainerView<Content: View>: View {
         NavigationStack {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(coordinator.viewModel.isCapturing ? .red : .white)
                 .overlay(alignment:.bottomLeading){
                     Button{
-                        
-                        coordinator.viewModel.takeScreenShoot { image in
-                            coordinator.viewModel.openBugSubmissionView(image: image)
-                        }
+                        coordinator.viewModel.takeScreenshotAndNavigate()
                     }label: {
                         Image(systemName: "ladybug")
                             .imageScale(.large)
@@ -35,7 +32,6 @@ struct ReporterContainerView<Content: View>: View {
                             .frame(width: UIScreen.main.bounds.width/6)
                             .background(Color.red)
                             .clipShape(RoundedCorner(radius: 10, corners: [.topRight, .bottomRight]))
-                        
                             .shadow(color: .black.opacity(0.3), radius: 6)
                     }
                     .padding(.bottom , 40)
@@ -53,19 +49,9 @@ struct ReporterContainerView<Content: View>: View {
 }
 
 
-struct ScreenBug: Hashable {
+struct ScreenBug {
    
-    let image: Image?
-    let description: String?
+    var image: Image?
+    var description: String
     
-    static func == (lhs: ScreenBug, rhs: ScreenBug) -> Bool {
-        // Assuming `description` is unique enough for equality checks.
-        // Adjust according to your needs.
-        return lhs.description == rhs.description
-    }
-
-    func hash(into hasher: inout Hasher) {
-        // Hash only the `description` because `Image` is not Hashable.
-        hasher.combine(description)
-    }
 }

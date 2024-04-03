@@ -12,13 +12,12 @@ import SwiftUI
 @MainActor
 public class MainCoordinator: ObservableObject , Identifiable {
     
-    @Published var bugSubmissionCoordinator: BugSubmissionCoordinator!
+    @Published var bugSubmissionCoordinator: BugSubmissionCoordinator?
     @Published var viewModel: MainViewModel!
     @Published var isBugSubmissionScreenActive: Bool = false
     
     init() {
         viewModel = MainViewModel(coordinator: self)
-        bugSubmissionCoordinator = .init(parent: self , report: .init(image: Image(systemName: "ladybug"), description: nil))
     }
     
     func openBugSubmissionScreen(){
