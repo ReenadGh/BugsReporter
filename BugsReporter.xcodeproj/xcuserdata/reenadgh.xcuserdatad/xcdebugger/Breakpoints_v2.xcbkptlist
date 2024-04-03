@@ -7,33 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC26B563-3FD0-407A-828B-E76341C7CDD7"
+            uuid = "E27BD10E-96BB-472E-B19E-84D86EE1AF8D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BugsReporter/BugSubmission/BugSubmissionCoordinator.swift"
+            filePath = "BugsReporter/ReporterContainer/ReporterContainerCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "backToParent()"
-            landmarkType = "7">
+            landmarkName = "ReporterContainerCoordinator"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7ABABA09-2FC7-44E4-995C-1379550F9D4A"
+            uuid = "56CD69EF-1103-495B-8BDA-89C59BEFD10A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BugsReporter/Main/MainCoordinator.swift"
+            filePath = "BugsReporter/Extentions/ImagePreview/ImagePreviewCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "closeBugSubmissionScreen()"
-            landmarkType = "7">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ImagePreviewCoordinator"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

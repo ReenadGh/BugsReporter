@@ -18,9 +18,12 @@ struct BugSubmissionView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
+            viewModel.report?.image?
+                .resizable()
                 .foregroundStyle(.tint)
+                .onTapGesture {
+                    viewModel.openImagePreview()
+                }
             Text("Hello, world!")
             
             Button{

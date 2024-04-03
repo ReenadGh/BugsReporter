@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
+import SwiftUI
 
 class MainViewModel: ObservableObject {
    
@@ -18,5 +19,11 @@ class MainViewModel: ObservableObject {
     
     @MainActor func openBugSubmissionScreen() {
         coordinator.openBugSubmissionScreen()
+    }
+    
+    func takeScreenShoot(completion: @escaping((Image?) -> Void)){
+        ScreenshotManager.shared.takeScreenshot(window: UIApplication.shared.windows.first) { image in
+                completion(image)
+        }
     }
 }

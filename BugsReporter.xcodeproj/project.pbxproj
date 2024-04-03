@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */; };
+		B8F09E3B2BBCE64D00E9D186 /* ReporterContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */; };
+		B8F09E3D2BBCE70600E9D186 /* ReporterContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */; };
+		B8F09E3F2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */; };
+		B8F09E422BBD5BF100E9D186 /* ReporterContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */; };
+		B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */; };
+		B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */; };
 		B8F0A6B92BBC09A0008B6D4E /* BugsReporterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */; };
 		B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */; };
 		B8F0A6BD2BBC09A3008B6D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsManager.swift; sourceTree = "<group>"; };
+		B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerView.swift; sourceTree = "<group>"; };
+		B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerCoordinator.swift; sourceTree = "<group>"; };
+		B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerCoordinatorView.swift; sourceTree = "<group>"; };
+		B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerViewModel.swift; sourceTree = "<group>"; };
+		B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewCoordinator.swift; sourceTree = "<group>"; };
+		B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
 		B8F0A6B52BBC09A0008B6D4E /* BugsReporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugsReporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugsReporterApp.swift; sourceTree = "<group>"; };
 		B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -87,6 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8F09E402BBCE72500E9D186 /* ReporterContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */,
+				B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */,
+				B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */,
+				B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */,
+			);
+			path = ReporterContainer;
+			sourceTree = "<group>";
+		};
+		B8F09E432BBD76C800E9D186 /* ImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */,
+				B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */,
+			);
+			path = ImagePreview;
+			sourceTree = "<group>";
+		};
 		B8F0A6AC2BBC09A0008B6D4E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +147,7 @@
 				B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */,
 				B8F0A6F42BBC1448008B6D4E /* Extentions */,
 				B8F0A6ED2BBC1183008B6D4E /* BugSubmission */,
+				B8F09E402BBCE72500E9D186 /* ReporterContainer */,
 				B8F0A6EC2BBC1171008B6D4E /* Main */,
 				B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */,
 				B8F0A6BE2BBC09A3008B6D4E /* Preview Content */,
@@ -151,6 +186,7 @@
 				B8F0A6E22BBC0F6B008B6D4E /* MainCoordinator.swift */,
 				B8F0A6E42BBC0F8E008B6D4E /* MainCoordinatorView.swift */,
 				B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */,
+				B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */,
 				B8F0A6F02BBC1225008B6D4E /* MainViewModel.swift */,
 			);
 			path = Main;
@@ -170,6 +206,7 @@
 		B8F0A6F42BBC1448008B6D4E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B8F09E432BBD76C800E9D186 /* ImagePreview */,
 				B8F0A6F22BBC143E008B6D4E /* View+Extention.swift */,
 			);
 			path = Extentions;
@@ -306,14 +343,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F0A6E52BBC0F8E008B6D4E /* MainCoordinatorView.swift in Sources */,
+				B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */,
 				B8F0A6EB2BBC1142008B6D4E /* BugSubmissionView.swift in Sources */,
+				B8F09E422BBD5BF100E9D186 /* ReporterContainerViewModel.swift in Sources */,
 				B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */,
 				B8F0A6E92BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift in Sources */,
+				B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */,
 				B8F0A6E72BBC111D008B6D4E /* BugSubmissionCoordinator.swift in Sources */,
 				B8F0A6F32BBC143E008B6D4E /* View+Extention.swift in Sources */,
 				B8F0A6EF2BBC11F7008B6D4E /* BugSubmissionViewModel.swift in Sources */,
+				B8F09E3D2BBCE70600E9D186 /* ReporterContainerCoordinator.swift in Sources */,
+				B8F09E3F2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift in Sources */,
+				B8F09E3B2BBCE64D00E9D186 /* ReporterContainerView.swift in Sources */,
 				B8F0A6B92BBC09A0008B6D4E /* BugsReporterApp.swift in Sources */,
 				B8F0A6E32BBC0F6B008B6D4E /* MainCoordinator.swift in Sources */,
+				B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */,
 				B8F0A6F12BBC1225008B6D4E /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +529,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +558,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
