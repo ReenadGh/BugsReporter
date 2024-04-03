@@ -17,12 +17,14 @@ struct MainCoordinatorView: View {
     
     var body: some View {
         
-        NavigationStack {
-            
-            MainView(viewModel: coordinator.viewModel)
-            
-                .navigationDestination(isPresented: $coordinator.isBugSubmissionScreenActive) {
-                    BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
+        ReporterContainerView{
+            NavigationStack {
+                
+                MainView(viewModel: coordinator.viewModel)
+                
+                    .navigationDestination(isPresented: $coordinator.isBugSubmissionScreenActive) {
+                        BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
+                    }
             }
         }
     }

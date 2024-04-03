@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 @MainActor
@@ -17,7 +18,7 @@ public class MainCoordinator: ObservableObject , Identifiable {
     
     init() {
         viewModel = MainViewModel(coordinator: self)
-        bugSubmissionCoordinator = .init(parent: self)
+        bugSubmissionCoordinator = .init(parent: self , report: .init(image: Image(systemName: "ladybug"), description: nil))
     }
     
     func openBugSubmissionScreen(){

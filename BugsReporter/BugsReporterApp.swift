@@ -12,7 +12,10 @@ struct BugsReporterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainCoordinatorView(coordinator: .init())
+            
+            
+                MainCoordinatorView(coordinator: .init())
+            
         }
     }
 }
