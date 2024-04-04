@@ -12,7 +12,7 @@ import SwiftUI
 @MainActor
 public class MainCoordinator: ObservableObject , Identifiable {
     
-    @Published var bugSubmissionCoordinator: BugSubmissionCoordinator?
+    @Published var bugsReporterCoordinatorView: BugsReporterCoordinatorView?
     @Published var viewModel: MainViewModel!
     @Published var isBugSubmissionScreenActive: Bool = false
     

@@ -14,6 +14,8 @@ public class BugSubmissionCoordinator: ObservableObject {
     
     @Published var previewCoordinator: ImagePreviewCoordinator?
     @Published var viewModel: BugSubmissionViewModel!
+    @Published var showSighIn: Bool = true
+
     var report: ScreenBug?
 
     init(parent: MainCoordinator?, report: ScreenBug = .init(image: nil, description: "")) {

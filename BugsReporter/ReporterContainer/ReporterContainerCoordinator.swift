@@ -12,17 +12,14 @@ import SwiftUI
 @MainActor
 public class ReporterContainerCoordinator: ObservableObject , Identifiable {
     
-    @Published var bugSubmissionCoordinator: BugSubmissionCoordinator?
+    @Published var bugsReporterCoordinator: BugsReporterCoordinator?
     @Published var viewModel: ReporterContainerViewModel!
     
     init() {
         viewModel = ReporterContainerViewModel(coordinator: self)
     }
     
-    deinit {
-        
-    }
     func openBugSubmissionScreen(with report: ScreenBug){
-            bugSubmissionCoordinator = .init(parent: nil, report: report)
+        bugsReporterCoordinator = .init()
     }
 }

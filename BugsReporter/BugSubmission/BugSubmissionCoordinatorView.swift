@@ -12,12 +12,11 @@ struct BugSubmissionCoordinatorView: View {
     @ObservedObject var coordinator: BugSubmissionCoordinator
 
     var body: some View {
-            
             NavigationStack {
                 BugSubmissionView(viewModel: coordinator.viewModel)
                     .navigation(item: $coordinator.previewCoordinator) { coordinator in
                         ImagePreviewView(coordinator: coordinator)
-                    }
             }
+        }
     }
 }

@@ -37,8 +37,8 @@ struct ReporterContainerView<Content: View>: View {
                     .padding(.bottom , 40)
                 }
             
-                .navigation(item: $coordinator.bugSubmissionCoordinator) { coordinator in
-                    BugSubmissionCoordinatorView(coordinator: coordinator)
+                .navigation(item: $coordinator.bugsReporterCoordinator) { coordinator in
+                   BugsReporterCoordinatorView(coordinator: coordinator)
                 }
         }
     }

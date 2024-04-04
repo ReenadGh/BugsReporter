@@ -1,0 +1,6 @@
+framework module Pods_BugsReporterTests {
+  umbrella header "Pods-BugsReporterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

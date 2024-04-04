@@ -20,7 +20,6 @@ struct MainView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Button{
-                viewModel.openBugSubmissionScreen()
             }label: {
                 Text("bugSubmission")
             }

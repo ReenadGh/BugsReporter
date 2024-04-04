@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-
+import GoogleSignIn
 struct BugSubmissionView: View {
   
     @ObservedObject var  viewModel: BugSubmissionViewModel
@@ -18,7 +18,6 @@ struct BugSubmissionView: View {
     
     var body: some View {
         VStack(spacing: 20) {
- 
             
             ZStack {
                 if  viewModel.isImageUploaded {
@@ -34,7 +33,7 @@ struct BugSubmissionView: View {
                         }
                         .frame(height: 400)
                         .frame(maxWidth: .infinity)
-                        .background(Color(.systemGray6).cornerRadius(12))
+                        .background(Color.softGreen.opacity(0.4).cornerRadius(12))
                         .overlay (alignment: .top){
                             HStack {
                                 Button{
@@ -67,7 +66,7 @@ struct BugSubmissionView: View {
                         }
                         .frame(height: 400)
                         .frame(maxWidth: .infinity)
-                        .background(Color(.systemGray6).cornerRadius(12))
+                        .background(Color(.softGreen).cornerRadius(12))
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .strokeBorder(style: StrokeStyle(lineWidth: 2, dash:[10]))
@@ -85,7 +84,7 @@ struct BugSubmissionView: View {
 
             
             ReusableButton(title: "Submit") {
-                
+                appendBugReportToSheet()
             }
              
             
@@ -100,3 +99,5 @@ struct BugSubmissionView: View {
 #Preview {
     BugSubmissionView(viewModel: .init(coordinator: .init(parent: .init()), report: .init(image: Image(systemName: "xmark"), description: "")))
 }
+
+

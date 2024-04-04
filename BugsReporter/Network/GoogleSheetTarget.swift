@@ -10,6 +10,7 @@ import Moya
 
 enum GoogleSheets {
     case createNewSpreadsheet(title: String)
+    case addSheetTab(title: String, spreadsheetId: String)
 }
 
 extension GoogleSheets: TargetType {
@@ -21,12 +22,14 @@ extension GoogleSheets: TargetType {
         switch self {
         case .createNewSpreadsheet:
             return "/spreadsheets"
+        case .addSheetTab(_, let spreadsheetId):
+                   return "/spreadsheets/\(spreadsheetId):batchUpdate"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .createNewSpreadsheet:
+        case .createNewSpreadsheet , .addSheetTab:
             return .post
         }
     }
@@ -40,16 +43,23 @@ extension GoogleSheets: TargetType {
                 ]
             ]
             return .requestParameters(parameters: jsonBody, encoding: JSONEncoding.default)
+            
+        case .addSheetTab(let title,_):
+            let jsonBody: [String: Any] = [
+                     "requests": [[
+                         "addSheet": [
+                             "properties": ["title": title]
+                         ]
+                     ]]
+                 ]
+                 return .requestParameters(parameters: jsonBody, encoding: JSONEncoding.default)
         }
     }
     
     var headers: [String : String]? {
-        switch self {
-        case .createNewSpreadsheet(_):
             return [
                 "Content-Type": "application/json"
             ]
-        }
     }
     
     // Sample Data for testing

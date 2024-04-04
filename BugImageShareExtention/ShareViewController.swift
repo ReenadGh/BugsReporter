@@ -8,7 +8,6 @@
 import UIKit
 import Social
 import SwiftUI
-import BugsReporter
 
 class ShareViewController: UIViewController {
 
@@ -18,11 +17,11 @@ class ShareViewController: UIViewController {
 
 }
 
-struct BugCoordinatorView: View {
-    
-    var body: some View {
-
-        BugsReporter.BugSubmissionCoordinatorView()
-      Text("Hi")
-    }
-}
+//struct BugCoordinatorView: View {
+//    
+//    var body: some View {
+//
+//        BugsReporter.BugSubmissionCoordinatorView()
+//      Text("Hi")
+//    }
+//}

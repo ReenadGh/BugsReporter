@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (5.8.0)
+  - AppAuth (1.6.2):
+    - AppAuth/Core (= 1.6.2)
+    - AppAuth/ExternalUserAgent (= 1.6.2)
+  - AppAuth/Core (1.6.2)
+  - AppAuth/ExternalUserAgent (1.6.2):
+    - AppAuth/Core
+  - GoogleSignIn (7.0.0):
+    - AppAuth (~> 1.5)
+    - GTMAppAuth (< 3.0, >= 1.3)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.1)
+  - GoogleSignInSwiftSupport (7.0.0):
+    - GoogleSignIn (~> 7.0)
+  - GTMAppAuth (2.0.0):
+    - AppAuth/Core (~> 1.6)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.5)
+  - GTMSessionFetcher/Core (3.3.2)
+  - lottie-ios (4.3.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/ReactiveSwift (15.0.0):
+    - Moya/Core
+    - ReactiveSwift (~> 6.6.1)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - ReactiveSwift (6.6.1)
+  - RxSwift (6.6.0)
+
+DEPENDENCIES:
+  - GoogleSignIn
+  - GoogleSignInSwiftSupport
+  - lottie-ios
+  - Moya
+  - Moya/Combine
+  - Moya/ReactiveSwift (~> 15.0)
+  - Moya/RxSwift (~> 15.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AppAuth
+    - GoogleSignIn
+    - GoogleSignInSwiftSupport
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - lottie-ios
+    - Moya
+    - ReactiveSwift
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  AppAuth: 3bb1d1cd9340bd09f5ed189fb00b1cc28e1e8570
+  GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
+  GoogleSignInSwiftSupport: 6ca6e5a978faa4cd43451b6b9b38b96ab5db1734
+  GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
+  GTMSessionFetcher: 0e876eea9782ec6462e91ab872711c357322c94f
+  lottie-ios: c69214a487e1a1465a231c1918c6ce174e2d45bc
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  ReactiveSwift: fab34244ad908808dc822bae352a058c8837c4ca
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+
+PODFILE CHECKSUM: 90f48aeb5d9435501a34c0a87ec9f1a8add7b320
+
+COCOAPODS: 1.15.2

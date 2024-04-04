@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185A910C4A973E6E42E2D6EF /* Pods_BugsReporter_BugsReporterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A8AE56342B4C5C8DD833DC /* Pods_BugsReporter_BugsReporterUITests.framework */; };
+		56FF96DB9264E4D5D42E1455 /* Pods_BugsReporterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6456DF41722EBC27108966CC /* Pods_BugsReporterTests.framework */; };
+		62C913A85BFFD9579BD0DFF9 /* Pods_BugsReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58183607C46C10D4C67604E /* Pods_BugsReporter.framework */; };
+		B8110B842BBEC4A300F1F96B /* GoogleSheetApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */; };
+		B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */; };
+		B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */; };
+		B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */; };
+		B8110B8E2BBEE06200F1F96B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8D2BBEE06200F1F96B /* SignInView.swift */; };
+		B8110B902BBEE0E300F1F96B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */; };
+		B8110B922BBEE9E900F1F96B /* BugsReporterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B912BBEE9E900F1F96B /* BugsReporterCoordinator.swift */; };
+		B8110B952BBEEA3F00F1F96B /* BugsReporterCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B942BBEEA3F00F1F96B /* BugsReporterCoordinatorView.swift */; };
+		B8110B982BBEF32400F1F96B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B972BBEF32400F1F96B /* LottieView.swift */; };
+		B8110B9A2BBEF36200F1F96B /* flayingBug.json in Resources */ = {isa = PBXBuildFile; fileRef = B8110B992BBEF36200F1F96B /* flayingBug.json */; };
+		B8110B9C2BBEF69100F1F96B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B9B2BBEF69100F1F96B /* AppColors.swift */; };
+		B8110B9E2BBF074700F1F96B /* sheet.json in Resources */ = {isa = PBXBuildFile; fileRef = B8110B9D2BBF074700F1F96B /* sheet.json */; };
+		B8110BA02BBF158200F1F96B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B9F2BBF158100F1F96B /* AuthenticationManager.swift */; };
+		B8110BA22BBF2F8800F1F96B /* SheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110BA12BBF2F8800F1F96B /* SheetManager.swift */; };
+		B8110BA42BBF3A5D00F1F96B /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */; };
+		B8110BA62BBF3CB300F1F96B /* HideView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */; };
+		B8110BA82BBF435200F1F96B /* AppNetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110BA72BBF435200F1F96B /* AppNetworkPlugin.swift */; };
+		B8110BAA2BBF4AD300F1F96B /* Date+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */; };
 		B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */; };
 		B8F09E3B2BBCE64D00E9D186 /* ReporterContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */; };
 		B8F09E3D2BBCE70600E9D186 /* ReporterContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */; };
-		B8F09E3F2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */; };
 		B8F09E422BBD5BF100E9D186 /* ReporterContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */; };
 		B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */; };
 		B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */; };
 		B8F09E532BBDA3FA00E9D186 /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */; };
 		B8F09E552BBDA7DE00E9D186 /* PhotosPickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */; };
-		B8F09E6A2BBDD56700E9D186 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E692BBDD56700E9D186 /* ShareViewController.swift */; };
-		B8F09E722BBDDE3D00E9D186 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E712BBDDE3D00E9D186 /* ShareViewController.swift */; };
-		B8F09E752BBDDE3D00E9D186 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B8F09E742BBDDE3D00E9D186 /* Base */; };
-		B8F09E792BBDDE3D00E9D186 /* BugImageShareExtention.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B8F09E6F2BBDDE3D00E9D186 /* BugImageShareExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B8F0A6B92BBC09A0008B6D4E /* BugsReporterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */; };
 		B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */; };
 		B8F0A6BD2BBC09A3008B6D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */; };
@@ -38,13 +54,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B8F09E772BBDDE3D00E9D186 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B8F0A6AD2BBC09A0008B6D4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B8F09E6E2BBDDE3D00E9D186;
-			remoteInfo = BugImageShareExtention;
-		};
 		B8F0A6C62BBC09A3008B6D4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B8F0A6AD2BBC09A0008B6D4E /* Project object */;
@@ -68,7 +77,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B8F09E792BBDDE3D00E9D186 /* BugImageShareExtention.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,10 +84,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B7C4F14852E8B9CE46CE6A9 /* Pods_BugImageShareExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugImageShareExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A8AE56342B4C5C8DD833DC /* Pods_BugsReporter_BugsReporterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugsReporter_BugsReporterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEFD761D15709384381FAAB /* Pods-BugsReporter-BugsReporterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporter-BugsReporterUITests.release.xcconfig"; path = "Target Support Files/Pods-BugsReporter-BugsReporterUITests/Pods-BugsReporter-BugsReporterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5F4F383BC5D138F15F277633 /* Pods-BugsReporterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporterTests.release.xcconfig"; path = "Target Support Files/Pods-BugsReporterTests/Pods-BugsReporterTests.release.xcconfig"; sourceTree = "<group>"; };
+		6456DF41722EBC27108966CC /* Pods_BugsReporterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugsReporterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FDC1F51F97534559B8EE89 /* Pods-BugImageShareExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugImageShareExtention.release.xcconfig"; path = "Target Support Files/Pods-BugImageShareExtention/Pods-BugImageShareExtention.release.xcconfig"; sourceTree = "<group>"; };
+		690E0241A9422D6A37D6A428 /* Pods-BugsReporter-BugsReporterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporter-BugsReporterUITests.debug.xcconfig"; path = "Target Support Files/Pods-BugsReporter-BugsReporterUITests/Pods-BugsReporter-BugsReporterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C678E0E25083818E91865FC /* Pods-BugImageShareExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugImageShareExtention.debug.xcconfig"; path = "Target Support Files/Pods-BugImageShareExtention/Pods-BugImageShareExtention.debug.xcconfig"; sourceTree = "<group>"; };
+		9CFB2817705AA71A8450126A /* Pods-BugsReporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporter.release.xcconfig"; path = "Target Support Files/Pods-BugsReporter/Pods-BugsReporter.release.xcconfig"; sourceTree = "<group>"; };
+		A97D0B0F25E7E66C9C79F991 /* Pods-BugsReporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporter.debug.xcconfig"; path = "Target Support Files/Pods-BugsReporter/Pods-BugsReporter.debug.xcconfig"; sourceTree = "<group>"; };
+		A9BDDC6D41FE3209F99A0660 /* Pods-BugsReporterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporterTests.debug.xcconfig"; path = "Target Support Files/Pods-BugsReporterTests/Pods-BugsReporterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B58183607C46C10D4C67604E /* Pods_BugsReporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugsReporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8110B822BBE098800F1F96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetApi.swift; sourceTree = "<group>"; };
+		B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetTarget.swift; sourceTree = "<group>"; };
+		B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewCoordinator.swift; sourceTree = "<group>"; };
+		B8110B8D2BBEE06200F1F96B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		B8110B912BBEE9E900F1F96B /* BugsReporterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugsReporterCoordinator.swift; sourceTree = "<group>"; };
+		B8110B942BBEEA3F00F1F96B /* BugsReporterCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugsReporterCoordinatorView.swift; sourceTree = "<group>"; };
+		B8110B972BBEF32400F1F96B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		B8110B992BBEF36200F1F96B /* flayingBug.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flayingBug.json; sourceTree = "<group>"; };
+		B8110B9B2BBEF69100F1F96B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		B8110B9D2BBF074700F1F96B /* sheet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sheet.json; sourceTree = "<group>"; };
+		B8110B9F2BBF158100F1F96B /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		B8110BA12BBF2F8800F1F96B /* SheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetManager.swift; sourceTree = "<group>"; };
+		B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extention.swift"; sourceTree = "<group>"; };
+		B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HideView+Extention.swift"; sourceTree = "<group>"; };
+		B8110BA72BBF435200F1F96B /* AppNetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNetworkPlugin.swift; sourceTree = "<group>"; };
+		B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extention.swift"; sourceTree = "<group>"; };
 		B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsManager.swift; sourceTree = "<group>"; };
 		B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerView.swift; sourceTree = "<group>"; };
 		B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerCoordinator.swift; sourceTree = "<group>"; };
-		B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerCoordinatorView.swift; sourceTree = "<group>"; };
 		B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerViewModel.swift; sourceTree = "<group>"; };
 		B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewCoordinator.swift; sourceTree = "<group>"; };
 		B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
@@ -88,8 +126,6 @@
 		B8F09E5C2BBDCDB700E9D186 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B8F09E5F2BBDCDB700E9D186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B8F09E612BBDCDB700E9D186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8F09E692BBDD56700E9D186 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		B8F09E6F2BBDDE3D00E9D186 /* BugImageShareExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BugImageShareExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F09E712BBDDE3D00E9D186 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B8F09E742BBDDE3D00E9D186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B8F09E762BBDDE3D00E9D186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,17 +150,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B8F09E6C2BBDDE3D00E9D186 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B8F0A6B22BBC09A0008B6D4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C913A85BFFD9579BD0DFF9 /* Pods_BugsReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FF96DB9264E4D5D42E1455 /* Pods_BugsReporterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,19 +170,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185A910C4A973E6E42E2D6EF /* Pods_BugsReporter_BugsReporterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AAC32A4AB50D0CB36E94F9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C678E0E25083818E91865FC /* Pods-BugImageShareExtention.debug.xcconfig */,
+				65FDC1F51F97534559B8EE89 /* Pods-BugImageShareExtention.release.xcconfig */,
+				A97D0B0F25E7E66C9C79F991 /* Pods-BugsReporter.debug.xcconfig */,
+				9CFB2817705AA71A8450126A /* Pods-BugsReporter.release.xcconfig */,
+				690E0241A9422D6A37D6A428 /* Pods-BugsReporter-BugsReporterUITests.debug.xcconfig */,
+				5EEFD761D15709384381FAAB /* Pods-BugsReporter-BugsReporterUITests.release.xcconfig */,
+				A9BDDC6D41FE3209F99A0660 /* Pods-BugsReporterTests.debug.xcconfig */,
+				5F4F383BC5D138F15F277633 /* Pods-BugsReporterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42E5DDF2D20E35BDE4CF7159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C4F14852E8B9CE46CE6A9 /* Pods_BugImageShareExtention.framework */,
+				B58183607C46C10D4C67604E /* Pods_BugsReporter.framework */,
+				25A8AE56342B4C5C8DD833DC /* Pods_BugsReporter_BugsReporterUITests.framework */,
+				6456DF41722EBC27108966CC /* Pods_BugsReporterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8110B852BBEC4A800F1F96B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */,
+				B8110BA72BBF435200F1F96B /* AppNetworkPlugin.swift */,
+				B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B8110B8A2BBEE02100F1F96B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */,
+				B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */,
+				B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */,
+				B8110B8D2BBEE06200F1F96B /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		B8110B932BBEE9F900F1F96B /* Bugs Reporter */ = {
+			isa = PBXGroup;
+			children = (
+				B8110B912BBEE9E900F1F96B /* BugsReporterCoordinator.swift */,
+				B8110B942BBEEA3F00F1F96B /* BugsReporterCoordinatorView.swift */,
+			);
+			path = "Bugs Reporter";
+			sourceTree = "<group>";
+		};
 		B8F09E402BBCE72500E9D186 /* ReporterContainer */ = {
 			isa = PBXGroup;
 			children = (
 				B8F09E3A2BBCE64D00E9D186 /* ReporterContainerView.swift */,
 				B8F09E3C2BBCE70600E9D186 /* ReporterContainerCoordinator.swift */,
 				B8F09E412BBD5BF100E9D186 /* ReporterContainerViewModel.swift */,
-				B8F09E3E2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift */,
 			);
 			path = ReporterContainer;
 			sourceTree = "<group>";
@@ -194,6 +281,8 @@
 				B8F09E5B2BBDCDB700E9D186 /* BugImageShareExtention */,
 				B8F09E702BBDDE3D00E9D186 /* BugImageShareExtention */,
 				B8F0A6B62BBC09A0008B6D4E /* Products */,
+				0AAC32A4AB50D0CB36E94F9B /* Pods */,
+				42E5DDF2D20E35BDE4CF7159 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,7 +292,6 @@
 				B8F0A6B52BBC09A0008B6D4E /* BugsReporter.app */,
 				B8F0A6C52BBC09A3008B6D4E /* BugsReporterTests.xctest */,
 				B8F0A6CF2BBC09A3008B6D4E /* BugsReporterUITests.xctest */,
-				B8F09E6F2BBDDE3D00E9D186 /* BugImageShareExtention.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,12 +299,25 @@
 		B8F0A6B72BBC09A0008B6D4E /* BugsReporter */ = {
 			isa = PBXGroup;
 			children = (
+				B8110B822BBE098800F1F96B /* Info.plist */,
+				B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */,
+				B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */,
+				B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */,
+				B8110B9F2BBF158100F1F96B /* AuthenticationManager.swift */,
+				B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */,
+				B8110BA12BBF2F8800F1F96B /* SheetManager.swift */,
 				B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */,
+				B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */,
+				B8110B852BBEC4A800F1F96B /* Network */,
 				B8F0A6F42BBC1448008B6D4E /* Extentions */,
+				B8110B932BBEE9F900F1F96B /* Bugs Reporter */,
 				B8F0A6ED2BBC1183008B6D4E /* BugSubmission */,
 				B8F09E402BBCE72500E9D186 /* ReporterContainer */,
+				B8110B8A2BBEE02100F1F96B /* SignIn */,
 				B8F0A6EC2BBC1171008B6D4E /* Main */,
 				B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */,
+				B8110B9D2BBF074700F1F96B /* sheet.json */,
+				B8110B992BBEF36200F1F96B /* flayingBug.json */,
 				B8F0A6BE2BBC09A3008B6D4E /* Preview Content */,
 			);
 			path = BugsReporter;
@@ -263,11 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				B8F0A6E82BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift */,
-				B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */,
 				B8F0A6E62BBC111D008B6D4E /* BugSubmissionCoordinator.swift */,
 				B8F0A6EA2BBC1142008B6D4E /* BugSubmissionView.swift */,
-				B8F09E692BBDD56700E9D186 /* ShareViewController.swift */,
-				B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */,
 				B8F0A6EE2BBC11F7008B6D4E /* BugSubmissionViewModel.swift */,
 			);
 			path = BugSubmission;
@@ -276,6 +374,8 @@
 		B8F0A6F42BBC1448008B6D4E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B8110B972BBEF32400F1F96B /* LottieView.swift */,
+				B8110B9B2BBEF69100F1F96B /* AppColors.swift */,
 				B8F09E432BBD76C800E9D186 /* ImagePreview */,
 				B8F0A6F22BBC143E008B6D4E /* View+Extention.swift */,
 			);
@@ -285,36 +385,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8F09E6E2BBDDE3D00E9D186 /* BugImageShareExtention */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B8F09E7A2BBDDE3D00E9D186 /* Build configuration list for PBXNativeTarget "BugImageShareExtention" */;
-			buildPhases = (
-				B8F09E6B2BBDDE3D00E9D186 /* Sources */,
-				B8F09E6C2BBDDE3D00E9D186 /* Frameworks */,
-				B8F09E6D2BBDDE3D00E9D186 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BugImageShareExtention;
-			productName = BugImageShareExtention;
-			productReference = B8F09E6F2BBDDE3D00E9D186 /* BugImageShareExtention.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		B8F0A6B42BBC09A0008B6D4E /* BugsReporter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8F0A6D92BBC09A3008B6D4E /* Build configuration list for PBXNativeTarget "BugsReporter" */;
 			buildPhases = (
+				FE925F3FC3856870457095E0 /* [CP] Check Pods Manifest.lock */,
 				B8F0A6B12BBC09A0008B6D4E /* Sources */,
 				B8F0A6B22BBC09A0008B6D4E /* Frameworks */,
 				B8F0A6B32BBC09A0008B6D4E /* Resources */,
 				B8F09E682BBDCDB700E9D186 /* Embed Foundation Extensions */,
+				5230E6074C62A8930162E970 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B8F09E782BBDDE3D00E9D186 /* PBXTargetDependency */,
 			);
 			name = BugsReporter;
 			productName = BugsReporter;
@@ -325,6 +409,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8F0A6DC2BBC09A3008B6D4E /* Build configuration list for PBXNativeTarget "BugsReporterTests" */;
 			buildPhases = (
+				87B5CF964AD39C287B5654FE /* [CP] Check Pods Manifest.lock */,
 				B8F0A6C12BBC09A3008B6D4E /* Sources */,
 				B8F0A6C22BBC09A3008B6D4E /* Frameworks */,
 				B8F0A6C32BBC09A3008B6D4E /* Resources */,
@@ -343,9 +428,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8F0A6DF2BBC09A3008B6D4E /* Build configuration list for PBXNativeTarget "BugsReporterUITests" */;
 			buildPhases = (
+				8B7C652C35D52A93FC3AB1A3 /* [CP] Check Pods Manifest.lock */,
 				B8F0A6CB2BBC09A3008B6D4E /* Sources */,
 				B8F0A6CC2BBC09A3008B6D4E /* Frameworks */,
 				B8F0A6CD2BBC09A3008B6D4E /* Resources */,
+				434FACFC0F33445391215713 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,9 +454,6 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					B8F09E6E2BBDDE3D00E9D186 = {
-						CreatedOnToolsVersion = 15.3;
-					};
 					B8F0A6B42BBC09A0008B6D4E = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -399,26 +483,19 @@
 				B8F0A6B42BBC09A0008B6D4E /* BugsReporter */,
 				B8F0A6C42BBC09A3008B6D4E /* BugsReporterTests */,
 				B8F0A6CE2BBC09A3008B6D4E /* BugsReporterUITests */,
-				B8F09E6E2BBDDE3D00E9D186 /* BugImageShareExtention */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B8F09E6D2BBDDE3D00E9D186 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B8F09E752BBDDE3D00E9D186 /* Base in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B8F0A6B32BBC09A0008B6D4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8110B9A2BBEF36200F1F96B /* flayingBug.json in Resources */,
 				B8F0A6C02BBC09A3008B6D4E /* Preview Assets.xcassets in Resources */,
 				B8F0A6BD2BBC09A3008B6D4E /* Assets.xcassets in Resources */,
+				B8110B9E2BBF074700F1F96B /* sheet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,37 +515,146 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		B8F09E6B2BBDDE3D00E9D186 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		434FACFC0F33445391215713 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F09E722BBDDE3D00E9D186 /* ShareViewController.swift in Sources */,
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BugsReporter-BugsReporterUITests/Pods-BugsReporter-BugsReporterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BugsReporter-BugsReporterUITests/Pods-BugsReporter-BugsReporterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BugsReporter-BugsReporterUITests/Pods-BugsReporter-BugsReporterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
+		5230E6074C62A8930162E970 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BugsReporter/Pods-BugsReporter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BugsReporter/Pods-BugsReporter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BugsReporter/Pods-BugsReporter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87B5CF964AD39C287B5654FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BugsReporterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B7C652C35D52A93FC3AB1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BugsReporter-BugsReporterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE925F3FC3856870457095E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BugsReporter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		B8F0A6B12BBC09A0008B6D4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8110B982BBEF32400F1F96B /* LottieView.swift in Sources */,
+				B8110BA22BBF2F8800F1F96B /* SheetManager.swift in Sources */,
 				B8F0A6E52BBC0F8E008B6D4E /* MainCoordinatorView.swift in Sources */,
+				B8110B952BBEEA3F00F1F96B /* BugsReporterCoordinatorView.swift in Sources */,
+				B8110B9C2BBEF69100F1F96B /* AppColors.swift in Sources */,
 				B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */,
-				B8F09E6A2BBDD56700E9D186 /* ShareViewController.swift in Sources */,
 				B8F09E532BBDA3FA00E9D186 /* ReusableButton.swift in Sources */,
+				B8110B902BBEE0E300F1F96B /* SignInViewModel.swift in Sources */,
+				B8110B842BBEC4A300F1F96B /* GoogleSheetApi.swift in Sources */,
 				B8F0A6EB2BBC1142008B6D4E /* BugSubmissionView.swift in Sources */,
 				B8F09E422BBD5BF100E9D186 /* ReporterContainerViewModel.swift in Sources */,
+				B8110BA02BBF158200F1F96B /* AuthenticationManager.swift in Sources */,
 				B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */,
 				B8F0A6E92BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift in Sources */,
+				B8110B8E2BBEE06200F1F96B /* SignInView.swift in Sources */,
+				B8110BA42BBF3A5D00F1F96B /* UIApplication+Extention.swift in Sources */,
+				B8110BA82BBF435200F1F96B /* AppNetworkPlugin.swift in Sources */,
 				B8F09E552BBDA7DE00E9D186 /* PhotosPickerDemo.swift in Sources */,
 				B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */,
 				B8F0A6E72BBC111D008B6D4E /* BugSubmissionCoordinator.swift in Sources */,
 				B8F0A6F32BBC143E008B6D4E /* View+Extention.swift in Sources */,
 				B8F0A6EF2BBC11F7008B6D4E /* BugSubmissionViewModel.swift in Sources */,
 				B8F09E3D2BBCE70600E9D186 /* ReporterContainerCoordinator.swift in Sources */,
-				B8F09E3F2BBCE71700E9D186 /* ReporterContainerCoordinatorView.swift in Sources */,
+				B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */,
+				B8110BA62BBF3CB300F1F96B /* HideView+Extention.swift in Sources */,
 				B8F09E3B2BBCE64D00E9D186 /* ReporterContainerView.swift in Sources */,
 				B8F0A6B92BBC09A0008B6D4E /* BugsReporterApp.swift in Sources */,
 				B8F0A6E32BBC0F6B008B6D4E /* MainCoordinator.swift in Sources */,
+				B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */,
+				B8110B922BBEE9E900F1F96B /* BugsReporterCoordinator.swift in Sources */,
+				B8110BAA2BBF4AD300F1F96B /* Date+Extention.swift in Sources */,
+				B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */,
 				B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */,
 				B8F0A6F12BBC1225008B6D4E /* MainViewModel.swift in Sources */,
 			);
@@ -494,11 +680,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B8F09E782BBDDE3D00E9D186 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B8F09E6E2BBDDE3D00E9D186 /* BugImageShareExtention */;
-			targetProxy = B8F09E772BBDDE3D00E9D186 /* PBXContainerItemProxy */;
-		};
 		B8F0A6C72BBC09A3008B6D4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B8F0A6B42BBC09A0008B6D4E /* BugsReporter */;
@@ -531,56 +712,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B8F09E7B2BBDDE3D00E9D186 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89ZB275WFG;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BugImageShareExtention/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BugImageShareExtention;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = renad.BugsReporter.BugImageShareExtention;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B8F09E7C2BBDDE3D00E9D186 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89ZB275WFG;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BugImageShareExtention/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BugImageShareExtention;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = renad.BugsReporter.BugImageShareExtention;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		B8F0A6D72BBC09A3008B6D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -618,7 +749,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -681,7 +812,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -702,6 +833,7 @@
 		};
 		B8F0A6DA2BBC09A3008B6D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97D0B0F25E7E66C9C79F991 /* Pods-BugsReporter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -712,6 +844,7 @@
 				DEVELOPMENT_TEAM = 89ZB275WFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BugsReporter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -733,6 +866,7 @@
 		};
 		B8F0A6DB2BBC09A3008B6D4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CFB2817705AA71A8450126A /* Pods-BugsReporter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -743,6 +877,7 @@
 				DEVELOPMENT_TEAM = 89ZB275WFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BugsReporter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -764,6 +899,7 @@
 		};
 		B8F0A6DD2BBC09A3008B6D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9BDDC6D41FE3209F99A0660 /* Pods-BugsReporterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -783,6 +919,7 @@
 		};
 		B8F0A6DE2BBC09A3008B6D4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F4F383BC5D138F15F277633 /* Pods-BugsReporterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -802,6 +939,7 @@
 		};
 		B8F0A6E02BBC09A3008B6D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 690E0241A9422D6A37D6A428 /* Pods-BugsReporter-BugsReporterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -819,6 +957,7 @@
 		};
 		B8F0A6E12BBC09A3008B6D4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEFD761D15709384381FAAB /* Pods-BugsReporter-BugsReporterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -837,15 +976,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8F09E7A2BBDDE3D00E9D186 /* Build configuration list for PBXNativeTarget "BugImageShareExtention" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B8F09E7B2BBDDE3D00E9D186 /* Debug */,
-				B8F09E7C2BBDDE3D00E9D186 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B8F0A6B02BBC09A0008B6D4E /* Build configuration list for PBXProject "BugsReporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
