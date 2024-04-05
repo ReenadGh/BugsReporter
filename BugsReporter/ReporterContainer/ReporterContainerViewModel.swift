@@ -15,7 +15,7 @@ class ReporterContainerViewModel: ObservableObject {
     @Published var isContainerHidden: Bool = false
     @Published var isCapturing = false
 
-    var report: ScreenBug?
+    var report: BugReport?
 
     init(coordinator: ReporterContainerCoordinator) {
         self.coordinator = coordinator
@@ -29,14 +29,14 @@ class ReporterContainerViewModel: ObservableObject {
         isContainerHidden = false
     }
    
-    func takeScreenShoot(completion: @escaping((Image?) -> Void)){
+    func takeScreenShoot(completion: @escaping((UIImage?) -> Void)){
         ScreenshotManager.shared.takeScreenshot(window: UIApplication.shared.windows.first) { image in
                 completion(image)
         }
     }
     
-    @MainActor private func openBugSubmissionView(image: Image?){
-        coordinator.openBugSubmissionScreen(with: .init(image: image, description: ""))
+    @MainActor private func openBugSubmissionView(image: UIImage?){
+        coordinator.openBugReporterScreen(with: .init(image: image, description: ""))
     }
     
     func takeScreenshotAndNavigate() {

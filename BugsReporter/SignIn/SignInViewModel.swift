@@ -12,20 +12,19 @@ import Combine
 class SignInViewModel: ObservableObject {
   
     unowned let coordinator: SignInCoordinator
-   
+    let googleSheetRepo: GoogleSheetRepositoryImplementation = .init()
+    private var cancellables = Set<AnyCancellable>()
+    
+    
     @Published var step: SignInStep = .step1
     @Published var sheetName: String = ""
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
 
-    let googleSheetRepo: GoogleSheetRepositoryImplementation = .init()
-    private var cancellables = Set<AnyCancellable>()
-
     
     init(coordinator: SignInCoordinator) {
         self.coordinator = coordinator
     }
-    
     
     func handleStepSignIn(){
         switch step {
@@ -41,6 +40,7 @@ class SignInViewModel: ObservableObject {
             switch result {
             case .success(_):
                 print("User Loggedin")
+                self.checkUserStepsStatus()
             case .failure(let failure):
                 self.showErrorAlert()
             }

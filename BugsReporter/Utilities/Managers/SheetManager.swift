@@ -23,12 +23,26 @@ class SheetManager {
     var sheetID: String? {
         return currentSheetKey
     }
+    var currentsheetTab: String {
+        
+        if currentSheetTab == nil {
+            createNewSheetTabName()
+        }
+        return currentSheetTab ?? ""
+    }
+    var currentsheetTabRange: String {
+        return currentSheetTab ?? "" + ":A1"
+    }
     
     func addSheetID(_ id: String) {
         currentSheetKey = id
     }
     
+    func createNewSheetTabName(){
+        currentSheetTab = Date().convertDate(.formattedType1)
+    }
+    
     func isSheetTabExpired()-> Bool{
-        let sheetTab = "20-12-24"
+        return currentSheetTab != Date().convertDate(.formattedType1)
     }
 }

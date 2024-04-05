@@ -10,7 +10,12 @@
 		185A910C4A973E6E42E2D6EF /* Pods_BugsReporter_BugsReporterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A8AE56342B4C5C8DD833DC /* Pods_BugsReporter_BugsReporterUITests.framework */; };
 		56FF96DB9264E4D5D42E1455 /* Pods_BugsReporterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6456DF41722EBC27108966CC /* Pods_BugsReporterTests.framework */; };
 		62C913A85BFFD9579BD0DFF9 /* Pods_BugsReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58183607C46C10D4C67604E /* Pods_BugsReporter.framework */; };
-		B8110B842BBEC4A300F1F96B /* GoogleSheetApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */; };
+		B810F0DC2BBF7F6D00632562 /* BugSubmissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0DB2BBF7F6D00632562 /* BugSubmissionUseCase.swift */; };
+		B810F0DE2BBF841C00632562 /* ImageHostingTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0DD2BBF841C00632562 /* ImageHostingTarget.swift */; };
+		B810F0E22BBF849D00632562 /* ImageHostingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E12BBF849D00632562 /* ImageHostingRepo.swift */; };
+		B810F0E72BBF9B2F00632562 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */; };
+		B810F0EA2BBFAC4100632562 /* BugReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E92BBFAC4100632562 /* BugReport.swift */; };
+		B8110B842BBEC4A300F1F96B /* GoogleSheetRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */; };
 		B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */; };
 		B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */; };
 		B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */; };
@@ -35,7 +40,7 @@
 		B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */; };
 		B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */; };
 		B8F09E532BBDA3FA00E9D186 /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */; };
-		B8F09E552BBDA7DE00E9D186 /* PhotosPickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */; };
+		B8F09E552BBDA7DE00E9D186 /* AppPhotosPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F09E542BBDA7DE00E9D186 /* AppPhotosPicker.swift */; };
 		B8F0A6B92BBC09A0008B6D4E /* BugsReporterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */; };
 		B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */; };
 		B8F0A6BD2BBC09A3008B6D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */; };
@@ -96,8 +101,13 @@
 		A97D0B0F25E7E66C9C79F991 /* Pods-BugsReporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporter.debug.xcconfig"; path = "Target Support Files/Pods-BugsReporter/Pods-BugsReporter.debug.xcconfig"; sourceTree = "<group>"; };
 		A9BDDC6D41FE3209F99A0660 /* Pods-BugsReporterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugsReporterTests.debug.xcconfig"; path = "Target Support Files/Pods-BugsReporterTests/Pods-BugsReporterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B58183607C46C10D4C67604E /* Pods_BugsReporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugsReporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B810F0DB2BBF7F6D00632562 /* BugSubmissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugSubmissionUseCase.swift; sourceTree = "<group>"; };
+		B810F0DD2BBF841C00632562 /* ImageHostingTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHostingTarget.swift; sourceTree = "<group>"; };
+		B810F0E12BBF849D00632562 /* ImageHostingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHostingRepo.swift; sourceTree = "<group>"; };
+		B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		B810F0E92BBFAC4100632562 /* BugReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReport.swift; sourceTree = "<group>"; };
 		B8110B822BBE098800F1F96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetApi.swift; sourceTree = "<group>"; };
+		B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetRepo.swift; sourceTree = "<group>"; };
 		B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetTarget.swift; sourceTree = "<group>"; };
 		B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewCoordinator.swift; sourceTree = "<group>"; };
@@ -122,7 +132,7 @@
 		B8F09E4C2BBD775300E9D186 /* ImagePreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewCoordinator.swift; sourceTree = "<group>"; };
 		B8F09E502BBD78A500E9D186 /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
 		B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
-		B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerDemo.swift; sourceTree = "<group>"; };
+		B8F09E542BBDA7DE00E9D186 /* AppPhotosPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPhotosPicker.swift; sourceTree = "<group>"; };
 		B8F09E5C2BBDCDB700E9D186 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B8F09E5F2BBDCDB700E9D186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B8F09E612BBDCDB700E9D186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,12 +213,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B810F0DF2BBF844500632562 /* GoogleSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */,
+				B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */,
+				B8110BA72BBF435200F1F96B /* AppNetworkPlugin.swift */,
+			);
+			path = GoogleSheet;
+			sourceTree = "<group>";
+		};
+		B810F0E02BBF845000632562 /* ImageHosting */ = {
+			isa = PBXGroup;
+			children = (
+				B810F0DD2BBF841C00632562 /* ImageHostingTarget.swift */,
+				B810F0E12BBF849D00632562 /* ImageHostingRepo.swift */,
+			);
+			path = ImageHosting;
+			sourceTree = "<group>";
+		};
+		B810F0E32BBF9AA500632562 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */,
+				B8110BA12BBF2F8800F1F96B /* SheetManager.swift */,
+				B8110B9F2BBF158100F1F96B /* AuthenticationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B810F0E42BBF9AD000632562 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8F0A6F42BBC1448008B6D4E /* Extentions */,
+				B810F0E52BBF9AE200632562 /* ReusableViews */,
+				B810F0E32BBF9AA500632562 /* Managers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B810F0E52BBF9AE200632562 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */,
+				B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */,
+				B8F09E542BBDA7DE00E9D186 /* AppPhotosPicker.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		B810F0E82BBF9BD200632562 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B810F0DB2BBF7F6D00632562 /* BugSubmissionUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B810F0EB2BBFAC5400632562 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B810F0E92BBFAC4100632562 /* BugReport.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B810F0EC2BBFB2B300632562 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */,
+				B8110B9D2BBF074700F1F96B /* sheet.json */,
+				B8110B992BBEF36200F1F96B /* flayingBug.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B8110B852BBEC4A800F1F96B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B8110B832BBEC4A300F1F96B /* GoogleSheetApi.swift */,
-				B8110BA72BBF435200F1F96B /* AppNetworkPlugin.swift */,
-				B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */,
+				B810F0E02BBF845000632562 /* ImageHosting */,
+				B810F0DF2BBF844500632562 /* GoogleSheet */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -216,10 +300,10 @@
 		B8110B8A2BBEE02100F1F96B /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */,
-				B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */,
 				B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */,
 				B8110B8D2BBEE06200F1F96B /* SignInView.swift */,
+				B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */,
+				B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -300,24 +384,18 @@
 			isa = PBXGroup;
 			children = (
 				B8110B822BBE098800F1F96B /* Info.plist */,
-				B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */,
-				B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */,
-				B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */,
-				B8110B9F2BBF158100F1F96B /* AuthenticationManager.swift */,
-				B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */,
-				B8110BA12BBF2F8800F1F96B /* SheetManager.swift */,
 				B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */,
-				B8F09E542BBDA7DE00E9D186 /* PhotosPickerDemo.swift */,
+				B810F0EB2BBFAC5400632562 /* Models */,
 				B8110B852BBEC4A800F1F96B /* Network */,
-				B8F0A6F42BBC1448008B6D4E /* Extentions */,
+				B810F0E42BBF9AD000632562 /* Utilities */,
+				B8110B9B2BBEF69100F1F96B /* AppColors.swift */,
+				B8F09E432BBD76C800E9D186 /* ImagePreview */,
 				B8110B932BBEE9F900F1F96B /* Bugs Reporter */,
 				B8F0A6ED2BBC1183008B6D4E /* BugSubmission */,
 				B8F09E402BBCE72500E9D186 /* ReporterContainer */,
 				B8110B8A2BBEE02100F1F96B /* SignIn */,
 				B8F0A6EC2BBC1171008B6D4E /* Main */,
-				B8F0A6BC2BBC09A3008B6D4E /* Assets.xcassets */,
-				B8110B9D2BBF074700F1F96B /* sheet.json */,
-				B8110B992BBEF36200F1F96B /* flayingBug.json */,
+				B810F0EC2BBFB2B300632562 /* Resources */,
 				B8F0A6BE2BBC09A3008B6D4E /* Preview Content */,
 			);
 			path = BugsReporter;
@@ -354,7 +432,6 @@
 				B8F0A6E22BBC0F6B008B6D4E /* MainCoordinator.swift */,
 				B8F0A6E42BBC0F8E008B6D4E /* MainCoordinatorView.swift */,
 				B8F0A6BA2BBC09A0008B6D4E /* MainView.swift */,
-				B8F09E382BBCCCEC00E9D186 /* ScreenshotsManager.swift */,
 				B8F0A6F02BBC1225008B6D4E /* MainViewModel.swift */,
 			);
 			path = Main;
@@ -363,8 +440,9 @@
 		B8F0A6ED2BBC1183008B6D4E /* BugSubmission */ = {
 			isa = PBXGroup;
 			children = (
-				B8F0A6E82BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift */,
+				B810F0E82BBF9BD200632562 /* UseCase */,
 				B8F0A6E62BBC111D008B6D4E /* BugSubmissionCoordinator.swift */,
+				B8F0A6E82BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift */,
 				B8F0A6EA2BBC1142008B6D4E /* BugSubmissionView.swift */,
 				B8F0A6EE2BBC11F7008B6D4E /* BugSubmissionViewModel.swift */,
 			);
@@ -374,9 +452,10 @@
 		B8F0A6F42BBC1448008B6D4E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */,
+				B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */,
+				B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */,
 				B8110B972BBEF32400F1F96B /* LottieView.swift */,
-				B8110B9B2BBEF69100F1F96B /* AppColors.swift */,
-				B8F09E432BBD76C800E9D186 /* ImagePreview */,
 				B8F0A6F22BBC143E008B6D4E /* View+Extention.swift */,
 			);
 			path = Extentions;
@@ -631,21 +710,23 @@
 				B8F09E4D2BBD775300E9D186 /* ImagePreviewCoordinator.swift in Sources */,
 				B8F09E532BBDA3FA00E9D186 /* ReusableButton.swift in Sources */,
 				B8110B902BBEE0E300F1F96B /* SignInViewModel.swift in Sources */,
-				B8110B842BBEC4A300F1F96B /* GoogleSheetApi.swift in Sources */,
+				B8110B842BBEC4A300F1F96B /* GoogleSheetRepo.swift in Sources */,
 				B8F0A6EB2BBC1142008B6D4E /* BugSubmissionView.swift in Sources */,
 				B8F09E422BBD5BF100E9D186 /* ReporterContainerViewModel.swift in Sources */,
 				B8110BA02BBF158200F1F96B /* AuthenticationManager.swift in Sources */,
 				B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */,
 				B8F0A6E92BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift in Sources */,
 				B8110B8E2BBEE06200F1F96B /* SignInView.swift in Sources */,
+				B810F0E22BBF849D00632562 /* ImageHostingRepo.swift in Sources */,
 				B8110BA42BBF3A5D00F1F96B /* UIApplication+Extention.swift in Sources */,
 				B8110BA82BBF435200F1F96B /* AppNetworkPlugin.swift in Sources */,
-				B8F09E552BBDA7DE00E9D186 /* PhotosPickerDemo.swift in Sources */,
+				B8F09E552BBDA7DE00E9D186 /* AppPhotosPicker.swift in Sources */,
 				B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */,
 				B8F0A6E72BBC111D008B6D4E /* BugSubmissionCoordinator.swift in Sources */,
 				B8F0A6F32BBC143E008B6D4E /* View+Extention.swift in Sources */,
 				B8F0A6EF2BBC11F7008B6D4E /* BugSubmissionViewModel.swift in Sources */,
 				B8F09E3D2BBCE70600E9D186 /* ReporterContainerCoordinator.swift in Sources */,
+				B810F0EA2BBFAC4100632562 /* BugReport.swift in Sources */,
 				B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */,
 				B8110BA62BBF3CB300F1F96B /* HideView+Extention.swift in Sources */,
 				B8F09E3B2BBCE64D00E9D186 /* ReporterContainerView.swift in Sources */,
@@ -654,7 +735,10 @@
 				B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */,
 				B8110B922BBEE9E900F1F96B /* BugsReporterCoordinator.swift in Sources */,
 				B8110BAA2BBF4AD300F1F96B /* Date+Extention.swift in Sources */,
+				B810F0E72BBF9B2F00632562 /* PhotoPicker.swift in Sources */,
+				B810F0DC2BBF7F6D00632562 /* BugSubmissionUseCase.swift in Sources */,
 				B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */,
+				B810F0DE2BBF841C00632562 /* ImageHostingTarget.swift in Sources */,
 				B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */,
 				B8F0A6F12BBC1225008B6D4E /* MainViewModel.swift in Sources */,
 			);

@@ -11,9 +11,11 @@ import Moya
 enum GoogleSheets {
     case createNewSpreadsheet(title: String)
     case addSheetTab(title: String, spreadsheetId: String)
+    case appendRow(spreadsheetId: String, range: String, values: [[String]])
 }
 
 extension GoogleSheets: TargetType {
+    
     var baseURL: URL {
         return URL(string: "https://sheets.googleapis.com/v4")!
     }
@@ -24,12 +26,15 @@ extension GoogleSheets: TargetType {
             return "/spreadsheets"
         case .addSheetTab(_, let spreadsheetId):
                    return "/spreadsheets/\(spreadsheetId):batchUpdate"
+            
+        case .appendRow(let spreadsheetId, let range, _):
+                    return "/spreadsheets/\(spreadsheetId)/values/\(range):append"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .createNewSpreadsheet , .addSheetTab:
+        case .createNewSpreadsheet , .addSheetTab, .appendRow:
             return .post
         }
     }
@@ -53,8 +58,13 @@ extension GoogleSheets: TargetType {
                      ]]
                  ]
                  return .requestParameters(parameters: jsonBody, encoding: JSONEncoding.default)
+            
+        case .appendRow(_, _, let values):
+              let params = ["values": values]
+              let queryParams = ["valueInputOption": "USER_ENTERED"]
+              return .requestCompositeParameters(bodyParameters: params, bodyEncoding: JSONEncoding.default, urlParameters: queryParams)
+          }
         }
-    }
     
     var headers: [String : String]? {
             return [

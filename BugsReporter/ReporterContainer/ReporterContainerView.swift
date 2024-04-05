@@ -30,15 +30,16 @@ struct ReporterContainerView<Content: View>: View {
                             .foregroundColor(.white)
                             .padding(10)
                             .frame(width: UIScreen.main.bounds.width/6)
-                            .background(Color.red)
+                            .background(Color.darkGreen)
                             .clipShape(RoundedCorner(radius: 10, corners: [.topRight, .bottomRight]))
                             .shadow(color: .black.opacity(0.3), radius: 6)
                     }
                     .padding(.bottom , 40)
                 }
             
-                .navigation(item: $coordinator.bugsReporterCoordinator) { coordinator in
-                   BugsReporterCoordinatorView(coordinator: coordinator)
+     
+                .navigationDestination(isPresented: $coordinator.isBugReporterShown) {
+                    BugsReporterCoordinatorView(coordinator: coordinator.bugsReporterCoordinator ?? .init(parent: .init()))
                 }
         }
     }
@@ -46,12 +47,4 @@ struct ReporterContainerView<Content: View>: View {
 
 #Preview {
     ReporterContainerView{Text("Hi")}
-}
-
-
-struct ScreenBug {
-   
-    var image: Image?
-    var description: String
-    
 }

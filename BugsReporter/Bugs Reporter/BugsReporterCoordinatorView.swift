@@ -15,7 +15,7 @@ struct BugsReporterCoordinatorView: View {
     var body: some View {
         if coordinator.showLoading {
             ProgressView()
-                .tint(Color.green.opacity(0.5))
+                .tint(Color.darkGreen)
         }else{
             
             if coordinator.showSignIn {
@@ -28,5 +28,5 @@ struct BugsReporterCoordinatorView: View {
 }
 
 #Preview {
-    BugsReporterCoordinatorView(coordinator: .init())
+    BugsReporterCoordinatorView(coordinator: .init(parent: .init()))
 }

@@ -24,7 +24,7 @@ struct BugSubmissionView: View {
                   
                         VStack(spacing : 20){
                           
-                            viewModel.report.image?
+                            Image(uiImage: viewModel.report.image!)
                                 .resizable()
                                 .scaledToFit()
                                 .cornerRadius(10)
@@ -33,7 +33,7 @@ struct BugSubmissionView: View {
                         }
                         .frame(height: 400)
                         .frame(maxWidth: .infinity)
-                        .background(Color.softGreen.opacity(0.4).cornerRadius(12))
+                        .background(Color.softGreen.opacity(0.3).cornerRadius(12))
                         .overlay (alignment: .top){
                             HStack {
                                 Button{
@@ -51,40 +51,25 @@ struct BugSubmissionView: View {
                                         .imageScale(.large)
                                 }
                             }
+                            .foregroundColor(.darkGreen)
                             .padding()
                         }
                         
                 } else {
-                    PhotosPickerDemo(image: $viewModel.report.image) {
-                        VStack(spacing : 20){
-                            
-                            Image(systemName:  "icloud.and.arrow.up")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 80, height: 60)
-                            Label("Upload Image" , systemImage: "ladybug")
-                        }
-                        .frame(height: 400)
-                        .frame(maxWidth: .infinity)
-                        .background(Color(.softGreen).cornerRadius(12))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .strokeBorder(style: StrokeStyle(lineWidth: 2, dash:[10]))
-                        )
-                    }
+                    AppPhotosPicker(image: $viewModel.report.image)
                 }
             }
             
-            TextField("Description", text: $viewModel.report.description)
+            TextField("Add Description Here", text: $viewModel.report.description)
                 .padding()
-                .background(Color(.systemGray6))
+                .background(.softGreen.opacity(0.3))
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
                 .cornerRadius(12)
 
             
             ReusableButton(title: "Submit") {
-                appendBugReportToSheet()
+                viewModel.submitNewBug()
             }
              
             
@@ -97,7 +82,5 @@ struct BugSubmissionView: View {
 }
 
 #Preview {
-    BugSubmissionView(viewModel: .init(coordinator: .init(parent: .init()), report: .init(image: Image(systemName: "xmark"), description: "")))
+    BugSubmissionView(viewModel: .init(coordinator: .init(parent: .init(parent: .init()), report: nil), report: .init(image: nil, imgageUrl: "", description: "")))
 }
-
-

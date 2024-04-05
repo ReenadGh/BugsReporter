@@ -16,7 +16,6 @@ class MainViewModel: ObservableObject {
    
    unowned let coordinator: MainCoordinator
    
-    
 
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator    
@@ -24,11 +23,5 @@ class MainViewModel: ObservableObject {
     
     @MainActor func openBugSubmissionScreen() {
         coordinator.openBugSubmissionScreen()
-    }
-    
-    func takeScreenShoot(completion: @escaping((Image?) -> Void)){
-        ScreenshotManager.shared.takeScreenshot(window: UIApplication.shared.windows.first) { image in
-                completion(image)
-        }
     }
 }

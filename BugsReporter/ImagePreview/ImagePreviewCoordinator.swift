@@ -20,6 +20,6 @@ public class ImagePreviewCoordinator: ObservableObject {
     }
     
     @MainActor func backToMainScreen() {
-        parent?.parent?.closeBugSubmissionScreen()
+
     }
 }

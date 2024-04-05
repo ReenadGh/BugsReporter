@@ -15,13 +15,13 @@ class ScreenshotManager {
     
     private init() {}
     
-    func takeScreenshot(window: UIWindow?, completion: @escaping (Image?) -> Void) {
+    func takeScreenshot(window: UIWindow?, completion: @escaping (UIImage?) -> Void) {
         DispatchQueue.main.async {
             UIGraphicsBeginImageContextWithOptions(window?.frame.size ?? CGSize(width: 300, height: 300), false, 0)
             window?.layer.render(in: UIGraphicsGetCurrentContext()!)
             if let image = UIGraphicsGetImageFromCurrentImageContext() {
                 UIGraphicsEndImageContext()
-                completion(Image(uiImage: image))
+                completion(image)
             }
         }
     }

@@ -10,7 +10,7 @@ import GoogleSignInSwift
 import GoogleSignIn
 
 struct MainCoordinatorView: View {
-   
+    
     @ObservedObject var coordinator: MainCoordinator
     
     public init(coordinator: MainCoordinator) {
@@ -21,14 +21,8 @@ struct MainCoordinatorView: View {
     var body: some View {
         
         ReporterContainerView{
-
             NavigationStack {
-
                 MainView(viewModel: coordinator.viewModel)
-                    .onAppear{}
-//                    .navigationDestination(isPresented: $coordinator.isBugSubmissionScreenActive) {
-//                        BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
-//                    }
             }
         }
     }

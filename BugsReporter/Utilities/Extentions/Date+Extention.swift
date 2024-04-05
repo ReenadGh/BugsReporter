@@ -53,6 +53,17 @@ extension Date {
                return 0
            }
        }
+    
+    static func isToday(dateString: String, format: String) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormattedType.formattedType1.rawValue
+        guard let date = dateFormatter.date(from: dateString) else {
+            print("Invalid date format or value")
+            return false
+        }
+        
+        return Calendar.current.isDateInToday(date)
+    }
 }
 
 enum DateFormattedType: String, CaseIterable {

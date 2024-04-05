@@ -7,12 +7,11 @@
 
 import Foundation
 import Moya
-
 struct GoogleAccessTokenPlugin: PluginType {
    
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         var request = request
-        if let accessToken = GIDSignIn.sharedInstance.currentUser?.accessToken.tokenString {
+        if let accessToken = AuthenticationManager.shared.accessToken {
             request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         }
         return request

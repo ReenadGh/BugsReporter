@@ -21,6 +21,9 @@ class AuthenticationManager {
     var isUserLoggedin: Bool {
         return GIDSignIn.sharedInstance.currentUser != nil
     }
+    var accessToken: String? {
+        return GIDSignIn.sharedInstance.currentUser?.accessToken.tokenString
+    }
     
     // Function to restore previous Google Sign-In
     func fetchUserAccess(completion: @escaping ((Result<GIDGoogleUser, Error>) -> Void)){

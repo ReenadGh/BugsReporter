@@ -9,21 +9,23 @@ import Foundation
 import GoogleSignIn
 import SwiftUI
 public class BugsReporterCoordinator: ObservableObject {
-        
+   
+    unowned let parent: ReporterContainerCoordinator?
+    
     @Published var signInCoordinator: SignInCoordinator!
     @Published var bugSubmissionCoordinator: BugSubmissionCoordinator!
     @Published var showSignIn: Bool = false
     @Published var showLoading: Bool = true
 
-    init() {
+    init(parent:ReporterContainerCoordinator , report:BugReport? = nil) {
+        self.parent = parent
         self.signInCoordinator = .init(parent: self)
-        self.bugSubmissionCoordinator = .init(parent: nil)
+        self.bugSubmissionCoordinator = .init(parent: self, report: report)
         self.fetchUserAccess()
     }
     
-    //TASK : reflect this logic in viewModel
-    
-    func fetchUserAccess(){
+    //TASK : move this logic in viewModel
+        func fetchUserAccess(){
         
         AuthenticationManager.shared.fetchUserAccess { result in
             defer {
@@ -39,20 +41,6 @@ public class BugsReporterCoordinator: ObservableObject {
                 self.showSignIn = true
             }
         }
-        
-//            GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-//                             if let error = error {
-//                                 print("Error restoring Google sign-in: \(error.localizedDescription)")
-//
-//                             } else if let user = user {
-//                                 print("User restored: \(user.profile?.name ?? "Unknown")")
-//                                 self.showLodaing = false
-//                                 guard self.sheetKey != nil else {
-//                                     return
-//                                 }
-//                                 self.showSighIn = true
-//                             }
-//        }
     }
 }
 
