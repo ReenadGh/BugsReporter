@@ -15,6 +15,7 @@
 		B810F0E22BBF849D00632562 /* ImageHostingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E12BBF849D00632562 /* ImageHostingRepo.swift */; };
 		B810F0E72BBF9B2F00632562 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */; };
 		B810F0EA2BBFAC4100632562 /* BugReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E92BBFAC4100632562 /* BugReport.swift */; };
+		B810F0EF2BC0964400632562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0EE2BC0964400632562 /* Constants.swift */; };
 		B8110B842BBEC4A300F1F96B /* GoogleSheetRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */; };
 		B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */; };
 		B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */; };
@@ -106,6 +107,7 @@
 		B810F0E12BBF849D00632562 /* ImageHostingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHostingRepo.swift; sourceTree = "<group>"; };
 		B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		B810F0E92BBFAC4100632562 /* BugReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReport.swift; sourceTree = "<group>"; };
+		B810F0EE2BC0964400632562 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B8110B822BBE098800F1F96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetRepo.swift; sourceTree = "<group>"; };
 		B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetTarget.swift; sourceTree = "<group>"; };
@@ -288,6 +290,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B810F0ED2BBFB51300632562 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */,
+				B810F0EE2BC0964400632562 /* Constants.swift */,
+				B8110B9B2BBEF69100F1F96B /* AppColors.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		B8110B852BBEC4A800F1F96B /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,11 +396,10 @@
 			isa = PBXGroup;
 			children = (
 				B8110B822BBE098800F1F96B /* Info.plist */,
-				B8F0A6B82BBC09A0008B6D4E /* BugsReporterApp.swift */,
+				B810F0ED2BBFB51300632562 /* App */,
 				B810F0EB2BBFAC5400632562 /* Models */,
 				B8110B852BBEC4A800F1F96B /* Network */,
 				B810F0E42BBF9AD000632562 /* Utilities */,
-				B8110B9B2BBEF69100F1F96B /* AppColors.swift */,
 				B8F09E432BBD76C800E9D186 /* ImagePreview */,
 				B8110B932BBEE9F900F1F96B /* Bugs Reporter */,
 				B8F0A6ED2BBC1183008B6D4E /* BugSubmission */,
@@ -717,6 +728,7 @@
 				B8F0A6BB2BBC09A0008B6D4E /* MainView.swift in Sources */,
 				B8F0A6E92BBC1132008B6D4E /* BugSubmissionCoordinatorView.swift in Sources */,
 				B8110B8E2BBEE06200F1F96B /* SignInView.swift in Sources */,
+				B810F0EF2BC0964400632562 /* Constants.swift in Sources */,
 				B810F0E22BBF849D00632562 /* ImageHostingRepo.swift in Sources */,
 				B8110BA42BBF3A5D00F1F96B /* UIApplication+Extention.swift in Sources */,
 				B8110BA82BBF435200F1F96B /* AppNetworkPlugin.swift in Sources */,

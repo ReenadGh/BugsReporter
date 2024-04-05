@@ -13,7 +13,7 @@ struct SignInViewCoordinator: View {
     var body: some View {
         SignInView(viewModel: coordinator.viewModel)
         
-            .alert(isPresented: $coordinator.viewModel.showAlert) {
+            .alert(isPresented: $coordinator.showAlert) {
                     Alert(
                         title: Text("Alert"),
                         message: Text(coordinator.viewModel.alertMessage),

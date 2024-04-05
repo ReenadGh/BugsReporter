@@ -18,7 +18,6 @@ class SignInViewModel: ObservableObject {
     
     @Published var step: SignInStep = .step1
     @Published var sheetName: String = ""
-    @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
 
     
@@ -48,8 +47,8 @@ class SignInViewModel: ObservableObject {
     }
     
     func showErrorAlert(){
-        showAlert = true
-        alertMessage = "Sorry , An Error Happen Try Again Later"
+        showAlert()
+        alertMessage = Constants.GENERAL_ERROR_MESSAGE
     }
     
     private func createNewSheet(){
@@ -71,9 +70,7 @@ class SignInViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func dissmisSignUpScreen(){
-        self.coordinator.parent?.showSignIn = false
-    }
+   
     func checkUserStepsStatus(){
         guard  AuthenticationManager.shared.isUserLoggedin else {
             return
@@ -83,4 +80,11 @@ class SignInViewModel: ObservableObject {
         }
     }
     
+    func dissmisSignUpScreen(){
+        self.coordinator.parent?.showSignIn = false
+    }
+    
+    func showAlert(){
+        self.coordinator.showAlert = true
+    }
 }

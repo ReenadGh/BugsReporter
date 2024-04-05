@@ -10,7 +10,8 @@ import Foundation
 public class SignInCoordinator: ObservableObject {
   
     unowned let parent: BugsReporterCoordinator?
-
+ 
+    @Published var showAlert: Bool = false
     @Published var viewModel: SignInViewModel!
   
 
