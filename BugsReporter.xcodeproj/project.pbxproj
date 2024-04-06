@@ -257,6 +257,7 @@
 		B810F0E52BBF9AE200632562 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				B8110B972BBEF32400F1F96B /* LottieView.swift */,
 				B810F0E62BBF9B2F00632562 /* PhotoPicker.swift */,
 				B8F09E522BBDA3FA00E9D186 /* ReusableButton.swift */,
 				B8F09E542BBDA7DE00E9D186 /* AppPhotosPicker.swift */,
@@ -466,7 +467,6 @@
 				B8110BA52BBF3CB300F1F96B /* HideView+Extention.swift */,
 				B8110BA92BBF4AD300F1F96B /* Date+Extention.swift */,
 				B8110BA32BBF3A5D00F1F96B /* UIApplication+Extention.swift */,
-				B8110B972BBEF32400F1F96B /* LottieView.swift */,
 				B8F0A6F22BBC143E008B6D4E /* View+Extention.swift */,
 			);
 			path = Extentions;

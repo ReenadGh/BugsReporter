@@ -8,6 +8,8 @@
 import Foundation
 import GoogleSignIn
 import SwiftUI
+
+@MainActor
 public class BugsReporterCoordinator: ObservableObject {
    
     unowned let parent: ReporterContainerCoordinator?

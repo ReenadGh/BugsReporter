@@ -29,7 +29,6 @@ class BugSubmissionViewModel: ObservableObject{
     }
     
     @MainActor func backToMainScreen(){
-        coordinator.parent?.parent?.closeBugSubmissionScreen()
     }
     
     @MainActor func openImagePreview(){
