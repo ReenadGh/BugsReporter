@@ -19,7 +19,7 @@ public class ImagePreviewCoordinator: ObservableObject {
         self.image = image
     }
     
-    @MainActor func backToMainScreen() {
-
+    func backToMainScreen() {
+        parent?.parent?.parent?.closeBugReporterScreen()
     }
 }

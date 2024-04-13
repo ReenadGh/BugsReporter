@@ -9,22 +9,29 @@ import Foundation
 import SwiftUI
 
 
-@MainActor
-public class MainCoordinator: ObservableObject , Identifiable {
+public class MainCoordinator: ObservableObject , BugsReporterParent {
     
-    @Published var bugsReporterCoordinatorView: BugsReporterCoordinatorView?
+    @Published var bugsReporterCoordinator: BugsReporterCoordinator?
     @Published var viewModel: MainViewModel!
-    @Published var isBugSubmissionScreenActive: Bool = false
+    @Published var isBugReporterScreenActive: Bool = false
     
     init() {
         viewModel = MainViewModel(coordinator: self)
     }
     
-    func openBugSubmissionScreen(){
-        isBugSubmissionScreenActive = true
+    func openBugReporterScreen(with report: BugReport) {
+        isBugReporterScreenActive = true
+        bugsReporterCoordinator = .init(parent: self)
+    }
+    func openImagePreview() {
+        bugsReporterCoordinator = .init(parent: self)
+        bugsReporterCoordinator?.showSignIn = false
+        bugsReporterCoordinator?.bugSubmissionCoordinator.openImagePreview(for: Image(systemName: "layybug"))
+        isBugReporterScreenActive = true
+
     }
     
-    func closeBugSubmissionScreen(){
-        isBugSubmissionScreenActive = false
+    func closeBugReporterScreen() {
+        isBugReporterScreenActive = false
     }
 }

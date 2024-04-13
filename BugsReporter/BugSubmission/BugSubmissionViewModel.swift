@@ -12,26 +12,33 @@ import Moya
 
 class BugSubmissionViewModel: ObservableObject{
     
-    unowned let coordinator: BugSubmissionCoordinator
-   
-    let useCase : BugSubmissionUseCase = .init(googleSheetRepo: .init())
-    let imageHosting =  ImageHostingRepositoryImplementation()
+    unowned private let coordinator: BugSubmissionCoordinator
     private var cancellables = Set<AnyCancellable>()
+    let useCase: BugSubmissionUseCase = .init(googleSheetRepo: .init())
+    let imageHosting =  ImageHostingRepositoryImplementation()
     
     @Published var report: BugReport
-    
+  
+    // MARK: - Properties
+    // MARK: - Initialization
+    // MARK: - Public Methods
+    // MARK: - Private Methods
+    // MARK: - Coordinator Methods
+
     init(coordinator: BugSubmissionCoordinator, report: BugReport) {
         self.coordinator = coordinator
         self.report = report
     }
+    
     var isImageUploaded: Bool {
         return report.image != nil
     }
     
-    @MainActor func backToMainScreen(){
+    func backToMainScreen(){
+        
     }
     
-    @MainActor func openImagePreview(){
+     func openImagePreview(){
             if let image = report.image {
                 coordinator.openImagePreview(for: Image(uiImage: image))
             }

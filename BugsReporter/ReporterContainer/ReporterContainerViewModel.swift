@@ -35,29 +35,32 @@ class ReporterContainerViewModel: ObservableObject {
         }
     }
     
-    @MainActor private func openBugSubmissionView(image: UIImage?){
+     private func openBugSubmissionView(image: UIImage?){
         coordinator.openBugReporterScreen(with: .init(image: image, description: ""))
     }
     
     func takeScreenshotAndNavigate() {
+        self.isContainerHidden = true
+
         // Begin the capture process
-        withAnimation(.spring(duration: 0.8)) {
+        withAnimation(.easeIn(duration: 0.2)) {
             isCapturing = true
         }
-        self.isContainerHidden = true
         // Simulate taking a screenshot
         self.takeScreenShoot { image in
             
             // Delay to simulate the "blink" effect
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                withAnimation(.spring(duration: 0.2)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation(.easeOut(duration: 0.2)) {
                     self.isCapturing = false
                 }
             }
             // Delay to navigate after the "blink"
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.openBugSubmissionView(image: image)
+                self.isContainerHidden = false
             }
         }
+
     }
 }

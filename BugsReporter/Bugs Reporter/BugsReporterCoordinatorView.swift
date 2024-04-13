@@ -28,5 +28,5 @@ struct BugsReporterCoordinatorView: View {
 }
 
 #Preview {
-    BugsReporterCoordinatorView(coordinator: .init(parent: .init()))
+    BugsReporterCoordinatorView(coordinator: .init(parent: ReporterContainerCoordinator.init()))
 }

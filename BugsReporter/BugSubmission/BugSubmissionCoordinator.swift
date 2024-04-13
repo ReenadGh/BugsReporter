@@ -8,28 +8,25 @@
 import Foundation
 import SwiftUI
 
-@MainActor
 public class BugSubmissionCoordinator: ObservableObject {
     
     unowned let parent: BugsReporterCoordinator?
+
     @Published var previewCoordinator: ImagePreviewCoordinator?
     @Published var viewModel: BugSubmissionViewModel!
     @Published var showSighIn: Bool = true
     
-    var report: BugReport?
     
     init(parent: BugsReporterCoordinator ,  report: BugReport?) {
         self.parent = parent
         viewModel = BugSubmissionViewModel(coordinator: self , report: report ?? .init())
     }
     
-    func openImagePreview(for image: Image)
-
-    {
+    func openImagePreview(for image: Image){
         previewCoordinator = .init(parent: self, image: image)
     }
-                                   
+    
     func backToBugReporterScreen(){
-        self.parent?.parent?.closeBugSubmissionScreen()
+        self.parent?.parent?.closeBugReporterScreen()
     }
-                                   }
+}

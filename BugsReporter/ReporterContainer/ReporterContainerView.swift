@@ -11,19 +11,20 @@ struct ReporterContainerView<Content: View>: View {
         
     let content: Content
     
-    @ObservedObject var coordinator = ReporterContainerCoordinator()
-    init(@ViewBuilder content: () -> Content) {
+    @ObservedObject var viewModel: ReporterContainerViewModel
+    
+    init(viewModel: ReporterContainerViewModel , @ViewBuilder content: () -> Content) {
          self.content = content()
+        self.viewModel = viewModel
      }
     
     var body: some View {
-        NavigationStack {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(coordinator.viewModel.isCapturing ? .red : .white)
+                .background(viewModel.isCapturing ? .darkGreen : .white)
                 .overlay(alignment:.bottomLeading){
                     Button{
-                        coordinator.viewModel.takeScreenshotAndNavigate()
+                        viewModel.takeScreenshotAndNavigate()
                     }label: {
                         Image(systemName: "ladybug")
                             .imageScale(.large)
@@ -35,16 +36,13 @@ struct ReporterContainerView<Content: View>: View {
                             .shadow(color: .black.opacity(0.3), radius: 6)
                     }
                     .padding(.bottom , 40)
+                    .isHidden(viewModel.isContainerHidden, remove: viewModel.isContainerHidden)
                 }
-            
-     
-                .navigationDestination(isPresented: $coordinator.isBugReporterShown) {
-                    BugsReporterCoordinatorView(coordinator: coordinator.bugsReporterCoordinator ?? .init(parent: .init()))
-                }
-        }
     }
 }
 
 #Preview {
-    ReporterContainerView{Text("Hi")}
+    ReporterContainerView (viewModel: .init(coordinator: .init())){
+        Text("Test")
+    }
 }

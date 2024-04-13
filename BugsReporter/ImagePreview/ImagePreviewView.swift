@@ -18,15 +18,15 @@ struct ImagePreviewView: View {
             .frame(maxWidth: .infinity)
             .background(Color.softGreen)
             .navigationTitle("Image Preview")
-//                     .toolbar {
-//                         if coordinator.parent?.parent != nil {
-//                             ToolbarItem(placement: .navigationBarTrailing) {
-//                                 Button("Back To Main") {
-//                                     coordinator.backToMainScreen()
-//                                 }
-//                             }
-//                         }
-//                     }
+                     .toolbar {
+                         if coordinator.parent?.parent != nil {
+                             ToolbarItem(placement: .navigationBarTrailing) {
+                                 Button("Cancel") {
+                                     coordinator.backToMainScreen()
+                                 }
+                             }
+                         }
+                     }
     }
 }
 

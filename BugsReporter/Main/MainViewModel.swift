@@ -21,7 +21,7 @@ class MainViewModel: ObservableObject {
         self.coordinator = coordinator    
     }
     
-    @MainActor func openBugSubmissionScreen() {
-        coordinator.openBugSubmissionScreen()
+     func openBugReporterScreen() {
+         coordinator.openBugReporterScreen(with: .init())
     }
 }

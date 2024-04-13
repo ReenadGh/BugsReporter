@@ -9,17 +9,16 @@ import Foundation
 import GoogleSignIn
 import SwiftUI
 
-@MainActor
 public class BugsReporterCoordinator: ObservableObject {
    
-    unowned let parent: ReporterContainerCoordinator?
+    unowned let parent: BugsReporterParent?
     
     @Published var signInCoordinator: SignInCoordinator!
     @Published var bugSubmissionCoordinator: BugSubmissionCoordinator!
     @Published var showSignIn: Bool = false
     @Published var showLoading: Bool = true
 
-    init(parent:ReporterContainerCoordinator , report:BugReport? = nil) {
+    init(parent:BugsReporterParent , report:BugReport? = nil) {
         self.parent = parent
         self.signInCoordinator = .init(parent: self)
         self.bugSubmissionCoordinator = .init(parent: self, report: report)
@@ -47,3 +46,9 @@ public class BugsReporterCoordinator: ObservableObject {
 }
 
 
+protocol BugsReporterParent: AnyObject {
+    
+    func openBugReporterScreen(with report: BugReport)
+    
+    func closeBugReporterScreen()
+}

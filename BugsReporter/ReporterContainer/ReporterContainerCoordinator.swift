@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 
-@MainActor
-public class ReporterContainerCoordinator: ObservableObject , Identifiable {
+public class ReporterContainerCoordinator: ObservableObject , Identifiable , BugsReporterParent {
     
     @Published var bugsReporterCoordinator: BugsReporterCoordinator?
     @Published var viewModel: ReporterContainerViewModel!
     @Published var isBugReporterShown:Bool = false
+    
     init() {
         viewModel = ReporterContainerViewModel(coordinator: self)
     }
@@ -23,7 +23,8 @@ public class ReporterContainerCoordinator: ObservableObject , Identifiable {
         bugsReporterCoordinator = .init(parent: self, report: report)
         isBugReporterShown = true
     }
-    func closeBugSubmissionScreen(){
+    
+    func closeBugReporterScreen() {
         bugsReporterCoordinator = nil
         isBugReporterShown = false
     }

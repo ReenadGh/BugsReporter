@@ -80,7 +80,7 @@ class SignInViewModel: ObservableObject {
         }
     }
     
-    func dissmisSignUpScreen(){
+   func dissmisSignUpScreen(){
         self.coordinator.parent?.showSignIn = false
     }
     

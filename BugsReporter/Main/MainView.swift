@@ -17,6 +17,12 @@ struct MainView: View {
     var body: some View {
         ScrollView {
             Text("*screen example*")
+            
+            ReusableButton(title: "+ New Ticket") {
+            
+                viewModel.openBugReporterScreen()
+            }
+            .padding(.horizontal , 30)
                 .foregroundStyle(.darkGreen)
 
                VStack(alignment: .leading) {
