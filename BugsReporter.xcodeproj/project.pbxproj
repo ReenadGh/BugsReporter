@@ -17,10 +17,12 @@
 		B810F0EA2BBFAC4100632562 /* BugReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0E92BBFAC4100632562 /* BugReport.swift */; };
 		B810F0EF2BC0964400632562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0EE2BC0964400632562 /* Constants.swift */; };
 		B810F0F12BC32E6F00632562 /* ReporterContainerCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0F02BC32E6F00632562 /* ReporterContainerCoordinatorView.swift */; };
+		B810F0F32BCBB86E00632562 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0F22BCBB86E00632562 /* MockCoordinator.swift */; };
+		B810F0F62BCD03DD00632562 /* IdentifiableHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F0F52BCD03DD00632562 /* IdentifiableHashable.swift */; };
 		B8110B842BBEC4A300F1F96B /* GoogleSheetRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */; };
 		B8110B872BBEC9C300F1F96B /* GoogleSheetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */; };
 		B8110B892BBEE01C00F1F96B /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */; };
-		B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */; };
+		B8110B8C2BBEE05000F1F96B /* SignInCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8B2BBEE05000F1F96B /* SignInCoordinatorView.swift */; };
 		B8110B8E2BBEE06200F1F96B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8D2BBEE06200F1F96B /* SignInView.swift */; };
 		B8110B902BBEE0E300F1F96B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */; };
 		B8110B922BBEE9E900F1F96B /* BugsReporterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8110B912BBEE9E900F1F96B /* BugsReporterCoordinator.swift */; };
@@ -110,11 +112,13 @@
 		B810F0E92BBFAC4100632562 /* BugReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReport.swift; sourceTree = "<group>"; };
 		B810F0EE2BC0964400632562 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B810F0F02BC32E6F00632562 /* ReporterContainerCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporterContainerCoordinatorView.swift; sourceTree = "<group>"; };
+		B810F0F22BCBB86E00632562 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
+		B810F0F52BCD03DD00632562 /* IdentifiableHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableHashable.swift; sourceTree = "<group>"; };
 		B8110B822BBE098800F1F96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8110B832BBEC4A300F1F96B /* GoogleSheetRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetRepo.swift; sourceTree = "<group>"; };
 		B8110B862BBEC9C300F1F96B /* GoogleSheetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetTarget.swift; sourceTree = "<group>"; };
 		B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
-		B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewCoordinator.swift; sourceTree = "<group>"; };
+		B8110B8B2BBEE05000F1F96B /* SignInCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorView.swift; sourceTree = "<group>"; };
 		B8110B8D2BBEE06200F1F96B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		B8110B912BBEE9E900F1F96B /* BugsReporterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugsReporterCoordinator.swift; sourceTree = "<group>"; };
@@ -318,7 +322,7 @@
 				B8110B8F2BBEE0E300F1F96B /* SignInViewModel.swift */,
 				B8110B8D2BBEE06200F1F96B /* SignInView.swift */,
 				B8110B882BBEE01C00F1F96B /* SignInCoordinator.swift */,
-				B8110B8B2BBEE05000F1F96B /* SignInViewCoordinator.swift */,
+				B8110B8B2BBEE05000F1F96B /* SignInCoordinatorView.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -400,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				B8110B822BBE098800F1F96B /* Info.plist */,
+				B810F0F52BCD03DD00632562 /* IdentifiableHashable.swift */,
+				B810F0F22BCBB86E00632562 /* MockCoordinator.swift */,
 				B810F0ED2BBFB51300632562 /* App */,
 				B810F0EB2BBFAC5400632562 /* Models */,
 				B8110B852BBEC4A800F1F96B /* Network */,
@@ -735,6 +741,7 @@
 				B810F0E22BBF849D00632562 /* ImageHostingRepo.swift in Sources */,
 				B8110BA42BBF3A5D00F1F96B /* UIApplication+Extention.swift in Sources */,
 				B8110BA82BBF435200F1F96B /* AppNetworkPlugin.swift in Sources */,
+				B810F0F32BCBB86E00632562 /* MockCoordinator.swift in Sources */,
 				B8F09E552BBDA7DE00E9D186 /* AppPhotosPicker.swift in Sources */,
 				B8F09E512BBD78A500E9D186 /* ImagePreviewView.swift in Sources */,
 				B810F0F12BC32E6F00632562 /* ReporterContainerCoordinatorView.swift in Sources */,
@@ -753,8 +760,9 @@
 				B8110BAA2BBF4AD300F1F96B /* Date+Extention.swift in Sources */,
 				B810F0E72BBF9B2F00632562 /* PhotoPicker.swift in Sources */,
 				B810F0DC2BBF7F6D00632562 /* BugSubmissionUseCase.swift in Sources */,
-				B8110B8C2BBEE05000F1F96B /* SignInViewCoordinator.swift in Sources */,
+				B8110B8C2BBEE05000F1F96B /* SignInCoordinatorView.swift in Sources */,
 				B810F0DE2BBF841C00632562 /* ImageHostingTarget.swift in Sources */,
+				B810F0F62BCD03DD00632562 /* IdentifiableHashable.swift in Sources */,
 				B8F09E392BBCCCEC00E9D186 /* ScreenshotsManager.swift in Sources */,
 				B8F0A6F12BBC1225008B6D4E /* MainViewModel.swift in Sources */,
 			);
@@ -950,7 +958,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -983,7 +991,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

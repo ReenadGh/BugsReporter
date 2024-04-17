@@ -14,7 +14,7 @@ import Combine
 
 class MainViewModel: ObservableObject {
    
-   unowned let coordinator: MainCoordinator
+   unowned private let coordinator: MainCoordinator
    
 
     init(coordinator: MainCoordinator) {

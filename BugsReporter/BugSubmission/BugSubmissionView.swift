@@ -82,5 +82,5 @@ struct BugSubmissionView: View {
 }
 
 #Preview {
-    BugSubmissionView(viewModel: .init(coordinator: .init(parent: .init(parent: ReporterContainerCoordinator.init()), report: nil), report: .init(image: nil, imgageUrl: "", description: "")))
+    BugSubmissionView(viewModel: MockViewModel.bugSubmissionViewModel)
 }

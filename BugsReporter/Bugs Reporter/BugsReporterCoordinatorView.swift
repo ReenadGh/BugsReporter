@@ -17,9 +17,8 @@ struct BugsReporterCoordinatorView: View {
             ProgressView()
                 .tint(Color.darkGreen)
         }else{
-            
             if coordinator.showSignIn {
-                SignInViewCoordinator(coordinator: coordinator.signInCoordinator)
+                SignInCoordinatorView(coordinator: coordinator.signInCoordinator)
             }else {
                 BugSubmissionCoordinatorView(coordinator: coordinator.bugSubmissionCoordinator)
             }

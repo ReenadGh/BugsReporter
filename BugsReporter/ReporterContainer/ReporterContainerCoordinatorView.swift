@@ -13,6 +13,7 @@ import SwiftUI
 struct ReporterContainerCoordinatorView<Content: View>: View {
         
     let content: Content
+    
     @ObservedObject var coordinator = ReporterContainerCoordinator()
     
     init(@ViewBuilder content: () -> Content) {
@@ -25,8 +26,9 @@ struct ReporterContainerCoordinatorView<Content: View>: View {
         ReporterContainerView(viewModel: coordinator.viewModel){
                 content
             }
-        .navigationDestination(isPresented: $coordinator.isBugReporterShown) {
-            BugsReporterCoordinatorView(coordinator: coordinator.bugsReporterCoordinator ?? .init(parent: ReporterContainerCoordinator.init()))
+            
+        .navigationDestination(item:  $coordinator.bugsReporterCoordinator) { coordinator in
+            BugsReporterCoordinatorView(coordinator: coordinator)
         }
         }
         
@@ -35,6 +37,8 @@ struct ReporterContainerCoordinatorView<Content: View>: View {
 
 #Preview {
     ReporterContainerCoordinatorView(){
-        
+        Text("hi")
     }
 }
+
+

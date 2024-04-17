@@ -65,7 +65,7 @@ class SignInViewModel: ObservableObject {
             } receiveValue: {sheetId in
                 print(sheetId)
                 SheetManager.shared.addSheetID(sheetId)
-                self.dissmisSignUpScreen()
+                self.closeSignUpScreen()
             }
             .store(in: &cancellables)
     }
@@ -80,7 +80,7 @@ class SignInViewModel: ObservableObject {
         }
     }
     
-   func dissmisSignUpScreen(){
+   func closeSignUpScreen(){
         self.coordinator.parent?.showSignIn = false
     }
     

@@ -21,7 +21,7 @@ struct ReporterContainerView<Content: View>: View {
     var body: some View {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(viewModel.isCapturing ? .darkGreen : .white)
+                .background(viewModel.backgroundColor)
                 .overlay(alignment:.bottomLeading){
                     Button{
                         viewModel.takeScreenshotAndNavigate()
@@ -36,7 +36,7 @@ struct ReporterContainerView<Content: View>: View {
                             .shadow(color: .black.opacity(0.3), radius: 6)
                     }
                     .padding(.bottom , 40)
-                    .isHidden(viewModel.isContainerHidden, remove: viewModel.isContainerHidden)
+                    .isHidden(viewModel.isFlagHidden, remove: viewModel.isFlagHidden)
                 }
     }
 }

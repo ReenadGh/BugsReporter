@@ -35,7 +35,7 @@ class BugSubmissionViewModel: ObservableObject{
     }
     
     func backToMainScreen(){
-        
+        coordinator.backToBugReporterContainerScreen()
     }
     
      func openImagePreview(){

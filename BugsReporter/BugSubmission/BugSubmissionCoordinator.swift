@@ -10,12 +10,15 @@ import SwiftUI
 
 public class BugSubmissionCoordinator: ObservableObject {
     
-    unowned let parent: BugsReporterCoordinator?
+    unowned private let parent: BugsReporterCoordinator?
 
     @Published var previewCoordinator: ImagePreviewCoordinator?
     @Published var viewModel: BugSubmissionViewModel!
     @Published var showSighIn: Bool = true
     
+    var isHaveParentScreen: Bool {
+        return parent != nil
+    }
     
     init(parent: BugsReporterCoordinator ,  report: BugReport?) {
         self.parent = parent
@@ -26,7 +29,7 @@ public class BugSubmissionCoordinator: ObservableObject {
         previewCoordinator = .init(parent: self, image: image)
     }
     
-    func backToBugReporterScreen(){
-        self.parent?.parent?.closeBugReporterScreen()
+    func backToBugReporterContainerScreen(){
+        self.parent?.backToReporterContainer()
     }
 }

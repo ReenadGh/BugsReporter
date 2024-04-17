@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-public class ReporterContainerCoordinator: ObservableObject , Identifiable , BugsReporterParent {
+public class ReporterContainerCoordinator: ObservableObject, IdentifiableHashable ,BugsReporterParent {
     
     @Published var bugsReporterCoordinator: BugsReporterCoordinator?
     @Published var viewModel: ReporterContainerViewModel!

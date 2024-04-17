@@ -20,18 +20,22 @@ struct MainCoordinatorView: View {
     
     var body: some View {
         
-        ReporterContainerCoordinatorView{
+        ReporterContainerCoordinatorView {
+         
             NavigationStack {
+             
                 MainView(viewModel: coordinator.viewModel)
-                    .sheet(isPresented: $coordinator.isBugReporterScreenActive){
-                        BugsReporterCoordinatorView(coordinator: coordinator.bugsReporterCoordinator!)
-                      }
+                 
+                    .sheet(item: $coordinator.bugsReporterCoordinator){
+                        coordinator in
+                        BugsReporterCoordinatorView(coordinator: coordinator)
+                    }
             }
         }
     }
 }
 
 #Preview {
-    MainCoordinatorView(coordinator: .init())
+    MainCoordinatorView(coordinator: MockCoordinator.mainCoordinator)
 }
 

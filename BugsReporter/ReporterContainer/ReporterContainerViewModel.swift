@@ -12,7 +12,7 @@ class ReporterContainerViewModel: ObservableObject {
    
    unowned let coordinator: ReporterContainerCoordinator
     
-    @Published var isContainerHidden: Bool = false
+    @Published var isFlagHidden: Bool = false
     @Published var isCapturing = false
 
     var report: BugReport?
@@ -21,12 +21,8 @@ class ReporterContainerViewModel: ObservableObject {
         self.coordinator = coordinator
     }
     
-    func hideContainer(){
-        isContainerHidden = true
-    }
-    
-    func showContainer(){
-        isContainerHidden = false
+    var backgroundColor: Color {
+        return isCapturing ? .darkGreen : .white
     }
    
     func takeScreenShoot(completion: @escaping((UIImage?) -> Void)){
@@ -40,7 +36,7 @@ class ReporterContainerViewModel: ObservableObject {
     }
     
     func takeScreenshotAndNavigate() {
-        self.isContainerHidden = true
+        self.isFlagHidden = true
 
         // Begin the capture process
         withAnimation(.easeIn(duration: 0.2)) {
@@ -58,7 +54,7 @@ class ReporterContainerViewModel: ObservableObject {
             // Delay to navigate after the "blink"
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.openBugSubmissionView(image: image)
-                self.isContainerHidden = false
+                self.isFlagHidden = false
             }
         }
 

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct SignInViewCoordinator: View {
+struct SignInCoordinatorView: View {
+  
     @StateObject var coordinator: SignInCoordinator
    
     var body: some View {
+        
         SignInView(viewModel: coordinator.viewModel)
         
             .alert(isPresented: $coordinator.showAlert) {
@@ -24,5 +26,5 @@ struct SignInViewCoordinator: View {
 }
 
 #Preview {
-    SignInViewCoordinator(coordinator: .init(parent: nil))
+    SignInCoordinatorView(coordinator: MockCoordinator.signInCoordinator)
 }

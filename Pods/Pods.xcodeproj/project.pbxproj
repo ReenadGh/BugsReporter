@@ -1626,6 +1626,7 @@
 		B793E014A1AAE5800DD050BE284EF8EE /* SkipWhile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkipWhile.swift; path = RxSwift/Observables/SkipWhile.swift; sourceTree = "<group>"; };
 		B7CEFABA31B3D95605B718EF2DCF6062 /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = Sources/Private/MainThread/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift; sourceTree = "<group>"; };
 		B7DF9666DD2BFA0106D7210204E62834 /* Pods-BugsReporter-BugsReporterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BugsReporter-BugsReporterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B810F0F42BCD03AD00632562 /* IdentifiableHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdentifiableHashable.swift; path = ../BugsReporter/IdentifiableHashable.swift; sourceTree = "<group>"; };
 		B8110B962BBEF32100F1F96B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = ../BugsReporter/BugSubmission/LottieView.swift; sourceTree = "<group>"; };
 		B815541A1C4429EA62843FF84D1C099D /* GIDProfileData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GIDProfileData.m; path = GoogleSignIn/Sources/GIDProfileData.m; sourceTree = "<group>"; };
 		B862CEC6F6DEA4CE44E327D793960DA4 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = Sources/Public/iOS/Compatibility/CompatibleAnimationView.swift; sourceTree = "<group>"; };
@@ -3037,6 +3038,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				B810F0F42BCD03AD00632562 /* IdentifiableHashable.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				B8110B962BBEF32100F1F96B /* LottieView.swift */,
 				48A7B7CE1BC11DFAA128559A9ADA8564 /* Frameworks */,

@@ -20,6 +20,6 @@ public class ImagePreviewCoordinator: ObservableObject {
     }
     
     func backToMainScreen() {
-        parent?.parent?.parent?.closeBugReporterScreen()
+        parent?.backToBugReporterContainerScreen()
     }
 }

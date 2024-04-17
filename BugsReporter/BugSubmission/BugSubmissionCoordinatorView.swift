@@ -20,3 +20,9 @@ struct BugSubmissionCoordinatorView: View {
         }
     }
 }
+
+#Preview {
+    NavigationView {
+        BugSubmissionCoordinatorView(coordinator: MockCoordinator.bugSubmissionCoordinator)
+    }
+}

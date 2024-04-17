@@ -19,7 +19,7 @@ struct ImagePreviewView: View {
             .background(Color.softGreen)
             .navigationTitle("Image Preview")
                      .toolbar {
-                         if coordinator.parent?.parent != nil {
+                         if ((coordinator.parent?.isHaveParentScreen) != nil) {
                              ToolbarItem(placement: .navigationBarTrailing) {
                                  Button("Cancel") {
                                      coordinator.backToMainScreen()

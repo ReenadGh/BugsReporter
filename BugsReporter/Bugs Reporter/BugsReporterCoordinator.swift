@@ -9,7 +9,7 @@ import Foundation
 import GoogleSignIn
 import SwiftUI
 
-public class BugsReporterCoordinator: ObservableObject {
+public class BugsReporterCoordinator: ObservableObject, IdentifiableHashable {
    
     unowned let parent: BugsReporterParent?
     
@@ -25,6 +25,14 @@ public class BugsReporterCoordinator: ObservableObject {
         self.fetchUserAccess()
     }
     
+    func backToReporterContainer(){
+        parent?.closeBugReporterScreen()
+    }
+    
+    func openSignInScreen() {
+        self.showSignIn = true
+    }
+    
     //TASK : move this logic in viewModel
         func fetchUserAccess(){
         
@@ -35,11 +43,11 @@ public class BugsReporterCoordinator: ObservableObject {
             switch result {
             case .success(_):
                 if !SheetManager.shared.isSheetAvailable {
-                    self.showSignIn = true
+                    self.openSignInScreen()
                 }
             case .failure(let error):
                 print("Error restoring Google sign-in: \(error.localizedDescription)")
-                self.showSignIn = true
+                self.openSignInScreen()
             }
         }
     }

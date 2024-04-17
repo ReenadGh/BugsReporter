@@ -66,5 +66,5 @@ struct MainView: View {
     }
 
 #Preview {
-    MainView(viewModel: MainViewModel(coordinator: MainCoordinator()))
+    MainView(viewModel: MockViewModel.mainViewModel)
 }
