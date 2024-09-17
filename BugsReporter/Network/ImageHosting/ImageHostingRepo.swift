@@ -13,11 +13,14 @@ protocol ImageHostingRepository {
    func addImageUrl(imageData: Data) -> AnyPublisher<String,MoyaError>}
 
 class ImageHostingRepositoryImplementation: ImageHostingRepository{
+    let loggerPlugin = NetworkLoggerPlugin(configuration: .init(
+        logOptions: .verbose
+    ))
     
     private let provider: MoyaProvider<ImgBBService>
     
     init() {
-        self.provider = MoyaProvider<ImgBBService>()
+        self.provider = MoyaProvider<ImgBBService>(plugins: [loggerPlugin])
     }
     
     func addImageUrl(imageData: Data) -> AnyPublisher<String,MoyaError> {
@@ -28,7 +31,6 @@ class ImageHostingRepositoryImplementation: ImageHostingRepository{
             .requestPublisher(.uploadImage(imageData: base64ImageString)) // Pass the Base64 string instead of raw Data
             .tryMap { response -> String in
                 let jsonResponse = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any]
-                print(jsonResponse)
                 if let data = jsonResponse?["data"] as? [String: Any], let imageUrl = data["url"] as? String {
                     return imageUrl
                 } else {

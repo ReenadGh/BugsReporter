@@ -18,9 +18,13 @@ protocol GoogleSheetRepository {
 class GoogleSheetRepositoryImplementation: GoogleSheetRepository {
 
     private let provider: MoyaProvider<GoogleSheets>
+  
+    let loggerPlugin = NetworkLoggerPlugin(configuration: .init(
+        logOptions: .verbose
+    ))
     
     init() {
-        self.provider = MoyaProvider<GoogleSheets>(plugins: [GoogleAccessTokenPlugin()])
+        self.provider = MoyaProvider<GoogleSheets>(plugins: [GoogleAccessTokenPlugin(), loggerPlugin])
     }
     
     func createNewSpreadsheet(title: String) -> AnyPublisher<String, MoyaError> {

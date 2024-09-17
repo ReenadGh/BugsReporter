@@ -36,7 +36,7 @@ class AuthenticationManager {
             }
         }
     }
-    func signup(completion: @escaping ((Result<String?, Error>) -> Void)){
+    func signIn(completion: @escaping ((Result<String?, Error>) -> Void)){
         
         GIDSignIn.sharedInstance.signIn(withPresenting: UIApplication.getRootViewController() , hint: nil, additionalScopes: scopes) { signInResult, error in
            
@@ -50,3 +50,15 @@ class AuthenticationManager {
     }
 }
 
+
+extension String {
+    func isEmptyOrWhitespace() -> Bool {
+        
+        // Check empty string
+        if self.isEmpty {
+            return true
+        }
+        // Trim and check empty string
+        return (self.trimmingCharacters(in: .whitespaces) == "")
+    }
+}

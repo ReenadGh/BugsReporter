@@ -35,13 +35,14 @@ class SignInViewModel: ObservableObject {
     }
   
     private func handleGoogleSignIn() {
-        AuthenticationManager.shared.signup { result in
+        AuthenticationManager.shared.signIn { result in
             switch result {
             case .success(_):
                 print("User Loggedin")
                 self.checkUserStepsStatus()
             case .failure(let failure):
                 self.showErrorAlert()
+                print(failure.localizedDescription)
             }
         }
     }
